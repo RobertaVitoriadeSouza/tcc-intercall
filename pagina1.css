@@ -1,0 +1,183 @@
+/* =========================================================
+   pagina1.html — Home
+   Depende das variáveis e do reset definidos em style.css
+   ========================================================= */
+
+/* Hero */
+.hero { background: var(--page-bg); padding: 48px 0; }
+.hero-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+.hero-copy { display: flex; flex-direction: column; gap: 20px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; }
+.eyebrow-dot {
+  width: 12px; height: 12px; border-radius: 50%; background: var(--lime); flex: none;
+  box-shadow: 0 0 10px var(--lime);
+}
+.eyebrow span:last-child {
+  font-size: 14px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--eyebrow-text);
+}
+.hero h1 {
+  font-weight: 700;
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -1.4px;
+  color: var(--heading-hero);
+}
+.hero-copy p {
+  font-size: 16px; line-height: 24px; color: var(--hero-body); max-width: 34em;
+}
+.hero-media img { border-radius: var(--radius-md); margin: 0 auto; }
+
+@media (min-width: 900px) {
+  .hero { padding: 80px 0; }
+  .hero-grid { grid-template-columns: 1.1fr 0.9fr; }
+  .hero-media img { margin: 0; }
+  .eyebrow span:last-child { font-size: 16px; }
+}
+
+/* =========================================================
+   Bento (Benefits) section
+   ========================================================= */
+.bento {
+  background: var(--bento-bg);
+  border-radius: var(--radius-section) var(--radius-section) 0 0;
+  padding: 48px 0;
+}
+.bento-heading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.bento-heading h2 {
+  font-weight: 400; font-size: 16px; letter-spacing: .5px; color: var(--bento-heading);
+}
+.bento-heading p { font-size: 16px; line-height: 24px; color: var(--bento-subtext); }
+
+.bento-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+.card {
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+.card-icon { margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 400; color: var(--near-black); margin-bottom: 12px; }
+.card p { font-size: 16px; line-height: 24px; }
+
+.card-diferencial, .card-security {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--card-text);
+}
+.link-arrow {
+  margin-top: 24px; display: inline-flex; align-items: center; gap: 12px;
+  font-weight: 700; font-size: 16px; color: var(--near-black);
+}
+
+.card-stat {
+  background: var(--stat-bg);
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px;
+}
+.stat-value { font-size: 60px; font-family: 'Space Grotesk', sans-serif; color: var(--lime); line-height: 1; }
+.stat-label { font-size: 16px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--green-pale); margin-top: 8px; }
+.stat-desc { font-size: 16px; line-height: 24px; color: #ede2c4; margin-top: 12px; }
+
+@media (min-width: 900px) {
+  .bento { padding: 80px 0; }
+  .card { padding: 40px; }
+}
+
+.card-photo {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 240px;
+}
+.card-photo img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.card-photo figcaption {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  margin-top: auto;
+  height: 100%;
+  display: flex; align-items: flex-end;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,.55), transparent 60%);
+}
+
+@media (min-width: 860px) {
+  .bento-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "diferencial stat"
+      "security photo";
+  }
+  .card-diferencial { grid-area: diferencial; }
+  .card-stat { grid-area: stat; }
+  .card-security { grid-area: security; }
+  .card-photo { grid-area: photo; }
+}
+
+/* =========================================================
+   Público Alvo
+   ========================================================= */
+.publico-alvo { background: var(--publico-bg); padding: 48px 0; }
+.publico-grid { display: grid; gap: 40px; align-items: center; }
+.publico-media img { border-radius: var(--radius-xl); border: 1px solid var(--green-dark); }
+.publico-copy { display: flex; flex-direction: column; gap: 28px; }
+.publico-copy h2 { font-size: 32px; font-weight: 600; color: var(--publico-heading); }
+.publico-item { display: flex; gap: 20px; }
+.publico-icon {
+  flex: none;
+  width: 48px; height: 48px; border-radius: var(--radius-sm);
+  background: var(--green-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.publico-item p { font-size: 16px; line-height: 24px; color: var(--publico-body); }
+
+@media (min-width: 900px) {
+  .publico-alvo { padding: 80px 0; }
+  .publico-grid { grid-template-columns: 0.9fr 1.1fr; }
+}
+
+/* =========================================================
+   Finalidade da Proposta
+   ========================================================= */
+.finalidade { background: var(--finalidade-bg); padding: 48px 0; }
+.finalidade-panel {
+  background: var(--finalidade-panel-bg);
+  border: 1px solid var(--lime);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: grid;
+  gap: 32px;
+}
+.finalidade-copy { display: flex; flex-direction: column; gap: 20px; }
+.finalidade-copy h2 { font-size: 32px; font-weight: 600; color: var(--finalidade-heading); }
+.finalidade-copy p { font-size: 16px; line-height: 24px; color: var(--finalidade-body); }
+
+.finalidade-highlight {
+  background: var(--green-dark);
+  border: 1px solid var(--lime);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.finalidade-highlight h3 { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 400; color: var(--lime); }
+.finalidade-highlight p { font-size: 14px; line-height: 20px; color: var(--highlight-body); }
+
+@media (min-width: 900px) {
+  .finalidade { padding: 80px 0; }
+  .finalidade-panel { grid-template-columns: 1.2fr 1fr; padding: 48px; }
+}

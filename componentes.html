@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Componentes e Valor — IntelliCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="componentes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">INTELLICART</a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html" class="active">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+        <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+      </button>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <span class="mobile-menu-handle"></span>
+    <p class="mobile-menu-title">INTELLICART</p>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html" class="active">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <section class="comp-hero">
+    <div class="container comp-hero-grid">
+      <div class="comp-hero-copy">
+        <h1>Componentes e Valor</h1>
+        <p>Para que o IntelliCart saísse do papel e se tornasse uma solução funcional e inovadora, foi necessário unir diferentes componentes e tecnologias capazes de transformar a experiência de compra em algo mais simples, rápido e moderno. Abaixo estão os principais itens utilizados no desenvolvimento do projeto e sua importância para o funcionamento do sistema.</p>
+        <a href="#produtos" class="btn-produto">Ver produto</a>
+      </div>
+      <div class="comp-hero-media">
+        <img src="imagens/hero-componentes.png" alt="Componentes eletrônicos utilizados no IntelliCart">
+      </div>
+    </div>
+  </section>
+
+  <section class="cost-section">
+    <div class="container cost-grid">
+      <div class="cost-list">
+        <h2>Valor Total Estimado do Projeto</h2>
+
+        <div class="cost-item">
+          <span class="cost-dot"></span>
+          <p><strong>1. Estrutura do Projeto</strong><br>Carrinho de Supermercado — R$100 a R$200</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-dot"></span>
+          <p><strong>2. Controle Principal do Sistema</strong><br>Placa UNO WiFi Atmega328P compatível com Arduino + ESP8266 — R$64,63</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-dot"></span>
+          <p><strong>3. Sistema de Pesagem Inteligente</strong><br>Balança para Arduino em MDF 6mm com 2 Células de Carga de 100kg — R$63,36</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-dot"></span>
+          <p><strong>4. Identificação dos Produtos</strong><br>Kit 10 Etiquetas RFID 13.56MHz — R$55,71</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-dot"></span>
+          <p><strong>5. Interface do Usuário</strong><br>Display TFT LCD Touch 7” SSD1963 para Arduino — R$184,69</p>
+        </div>
+        <div class="cost-item cost-item--accent">
+          <span class="cost-dot"></span>
+          <p><strong>6. Alimentação e Conexões</strong><br>Conector Bateria 9V com saída P4 + bateria — R$20,00 · Cabo USB Tipo A-B para Arduino — R$9,49 · Fios para Protoboard Fêmea-Macho — R$13,49</p>
+        </div>
+        <div class="cost-item cost-item--accent">
+          <span class="cost-dot"></span>
+          <p><strong>7. Componentes Auxiliares</strong><br>Resistor 1K8 1,8k 1/4W — Kit com 100 unidades — R$12,95</p>
+        </div>
+      </div>
+
+      <div class="cost-side">
+        <div class="investment-card">
+          <div class="investment-head">
+            <h3>Investimento Aproximado:</h3>
+            <span class="investment-dots"><span></span><span></span></span>
+          </div>
+          <p class="investment-value">R$524,32 a R$624,32</p>
+        </div>
+        <img class="cost-cart-photo" src="imagens/hero-carrinho.png" alt="Carrinho de compras inteligente IntelliCart">
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section" id="produtos">
+    <div class="container">
+      <div class="products-track">
+        <article class="product-card">
+          <img src="imagens/produto-fios.png" alt="Fios para Protoboard Fêmea-Macho">
+          <div class="product-info">
+            <p class="product-rating">4,7 ★★★★★</p>
+            <p class="product-name">Fios para Protoboard Fêmea-Macho</p>
+            <p class="product-price">R$ 13,49</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-arduino.png" alt="Placa UNO Wifi Atmega328P compatível Arduino">
+          <div class="product-info">
+            <p class="product-rating">4,2 ★★★★☆</p>
+            <p class="product-name">Placa UNO Wifi Atmega328P compatível Arduino com ESP8266 e CH340</p>
+            <p class="product-price">R$ 64,63</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-balanca.png" alt="Balança para Arduino em MDF">
+          <div class="product-info">
+            <p class="product-name">Balança para Arduino em MDF 6mm com 2 Células de Carga de 100kg</p>
+            <p class="product-price">R$ 63,36</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-resistor.png" alt="Resistor 1K8 1,8k para eletrônica">
+          <div class="product-info">
+            <p class="product-rating">4,2 ★★★★☆</p>
+            <p class="product-name">Resistor 1K8 1,8k -1/4W-5% Kit com 100 Unidades - Para Eletrônica</p>
+            <p class="product-price">R$ 12,95</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-chicote.png" alt="Conector Bateria 9V saída P4">
+          <div class="product-info">
+            <p class="product-rating">4,9 ★★★★★</p>
+            <p class="product-name">Conector Bateria 9v Saída P4 Com Bateria 9 Volts Inclusa Para Arduino</p>
+            <p class="product-price">R$ 20,00</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-bateria.png" alt="Fios para Protoboard Fêmea-Macho">
+          <div class="product-info">
+            <p class="product-rating">4,7 ★★★★★</p>
+            <p class="product-name">Fios para Protoboard Fêmea-Macho</p>
+            <p class="product-price">R$ 13,49</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-usb.png" alt="Cabo USB Tipo A-B compatível com Arduino">
+          <div class="product-info">
+            <p class="product-rating">4,8 ★★★★★</p>
+            <p class="product-name">Cabo USB Tipo A - B Compatível com Arduino Uno / Mega - 1 metro</p>
+            <p class="product-price">R$ 9,49</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-escaner.png" alt="Leitor / scanner de produtos">
+          <div class="product-info">
+            <p class="product-rating">4,7 ★★★★★</p>
+            <p class="product-price">R$ 87,90</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-carrinho.png" alt="Carrinho de supermercado">
+          <div class="product-info">
+            <p class="product-name">Carrinho de Supermercado</p>
+            <p class="product-price">R$ 100-200</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-tag.png" alt="Kit 10 etiquetas RFID">
+          <div class="product-info">
+            <p class="product-rating">5,0 ★★★★★</p>
+            <p class="product-name">Kit 10 Etiquetas Adesivas 13,56mhz - Tag RFID Mifare</p>
+            <p class="product-price">R$ 55,71</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="imagens/produto-display.png" alt="Display TFT LCD Touch 7 polegadas">
+          <div class="product-info">
+            <p class="product-name">7" Inch TFT LCD Module Resistive Touch SSD1963 Shield for Arduino</p>
+            <p class="product-price">R$ 184,69</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
+        <span>INTELLICART</span>
+      </div>
+      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+      </ul>
+      <ul>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+      </ul>
+      <ul>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-team">
+      <h4>Integrantes</h4>
+      <ul>
+        <li>Sophia Leal</li>
+        <li>Guilherme Carvalho</li>
+        <li>Roberta Vitória</li>
+        <li>Matheus Lima</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="componentes.js"></script>
+</body>
+</html>

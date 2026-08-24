@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo — IntelliCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;900&family=Gajraj+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">INTELLICART</a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html" class="active">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+        <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+      </button>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <span class="mobile-menu-handle"></span>
+    <p class="mobile-menu-title">INTELLICART</p>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html" class="active">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <section class="jogo-hero">
+    <div class="container jogo-hero-grid">
+      <div class="jogo-hero-copy">
+        <span class="jogo-badge">Turno da Noite: Quem é o Ladrão?</span>
+        <h1>Jogo</h1>
+        <p>"Turno da Noite: Quem é o Ladrão?" ("Night Watch: Who's the Thief?") é um jogo top-down de suspense e investigação em que o jogador controla um segurança noturno dentro de um supermercado fechado. Utilizando câmeras e observação, o objetivo é identificar o ladrão escondido entre os clientes antes de ser atacado. Conforme as fases avançam, a dificuldade aumenta com falhas nas câmeras, luzes piscando e NPCs mais difíceis de analisar.</p>
+        <div class="jogo-buttons">
+          <a href="#fases" class="btn-jogo-fill">Começar Agora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#video-demo" class="btn-jogo-outline">Ver Vídeo Demo</a>
+        </div>
+      </div>
+      <div class="jogo-hero-media">
+        <img src="imagens/jogo-hero.png" alt="Captura de tela do jogo Turno da Noite, mostrando a câmera de segurança do supermercado">
+      </div>
+    </div>
+  </section>
+
+  <section class="jogo-journey">
+    <div class="container jogo-journey-grid">
+      <div class="jogo-resumo">
+        <span class="jogo-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 6V4h10v2"/></svg>
+        </span>
+        <h2>Resumo da Gameplay</h2>
+        <p>Durante a madrugada, diversos NPCs entram no supermercado realizando ações aparentemente normais, como andar pelos corredores, observar produtos e interagir com as prateleiras. No entanto, entre eles, um personagem é definido secretamente como o ladrão, apresentando comportamentos suspeitos de forma sutil, como evitar áreas monitoradas, permanecer em locais isolados e acumular itens sem seguir até o caixa. O jogador deve utilizar as câmeras de segurança e a exploração direta do mercado para analisar padrões de comportamento e identificar o suspeito antes que seja tarde. Ao longo da partida, o segurança pode abordar apenas três pessoas, tornando cada decisão importante para a sobrevivência. Conforme as fases avançam, a dificuldade aumenta gradualmente: o número de clientes cresce, o ladrão se torna mais inteligente e imprevisível, as luzes começam a falhar e as câmeras passam a apresentar interferências. Esses elementos criam uma atmosfera de tensão constante, exigindo atenção, estratégia e rapidez para manter o controle do supermercado durante todo o turno da noite.</p>
+        <div class="jogo-gallery">
+          <img src="imagens/jogo-screenshot1.png" class="gallery-wide" alt="Visão geral do supermercado no jogo, com sala de segurança e câmeras">
+          <img src="imagens/jogo-screenshot2.png" class="gallery-wide" alt="Tela de monitoramento por câmeras e ficha do segurança">
+          <img src="imagens/jogo-screenshot2.png" class="gallery-tall" alt="Ficha do personagem de segurança do jogo">
+        </div>
+      </div>
+
+      <div class="jogo-fases" id="fases">
+        <span class="jogo-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg>
+        </span>
+        <h2>Fases da Gameplay</h2>
+
+        <div class="jogo-fase">
+          <h3>Fase 1 — Primeiro Turno</h3>
+          <p>O supermercado está relativamente calmo e possui poucos clientes circulando. O ladrão apresenta comportamentos suspeitos mais simples, permitindo que o jogador aprenda a usar as câmeras, a lanterna e o sistema de abordagem.</p>
+        </div>
+        <div class="jogo-fase">
+          <h3>Fase 2 — Movimento Suspeito</h3>
+          <p>O número de NPCs aumenta e o ladrão começa a evitar áreas iluminadas e câmeras de segurança. O jogador precisa prestar mais atenção nos corredores e no tempo que cada personagem permanece em determinados setores.</p>
+        </div>
+        <div class="jogo-fase">
+          <h3>Fase 3 — Falhas no Sistema</h3>
+          <p>As câmeras passam a apresentar interferências temporárias e algumas luzes começam a piscar pelo supermercado. A visibilidade reduzida aumenta a tensão e dificulta a identificação correta do suspeito, o jogador deve administrar cuidadosamente as lanternas restantes para não ficar completamente vulnerável no escuro.</p>
+        </div>
+        <div class="jogo-fase">
+          <h3>Fase Final — Último Turno</h3>
+          <p>Todas as mecânicas anteriores se intensificam ao máximo. As falhas elétricas são constantes, as câmeras desligam por períodos maiores e o ladrão pode agir de forma muito mais rápida, exigindo observação, estratégia e precisão para sobreviver até o fim do turno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jogo-video" id="video-demo">
+    <div class="container">
+      <h2>Video Demo</h2>
+      <div class="jogo-video-frame">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
+        <span>INTELLICART</span>
+      </div>
+      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+      </ul>
+      <ul>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+      </ul>
+      <ul>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-team">
+      <h4>Integrantes</h4>
+      <ul>
+        <li>Sophia Leal</li>
+        <li>Guilherme Carvalho</li>
+        <li>Roberta Vitória</li>
+        <li>Matheus Lima</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="jogo.js"></script>
+</body>
+</html>

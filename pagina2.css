@@ -1,0 +1,147 @@
+/* =========================================================
+   pagina2.html — "Como Funciona"
+   Depende das variáveis e do reset definidos em style.css
+   ========================================================= */
+
+:root {
+  --step2-color: #c3cf5a;
+  --step3-color: #ffb786;
+  --step4-color: #fb923c;
+}
+
+[data-theme="dark"] {
+  --btn-fill: #ffb786;
+  --btn-outline: #c3cf5a;
+  --roadmap-border: #a8d1a3;
+  --step1-color: #a8d1a3;
+  --nota1-color: #a8d1a3;
+  --nota2-color: #c3cf5a;
+  --nota3-color: #ffb786;
+  --muted-accent: #7da57a;
+  --video-gradient: linear-gradient(180deg, #163a19, #022c22);
+}
+
+[data-theme="light"] {
+  --btn-fill: #eb7322;
+  --btn-outline: #a8b916;
+  --roadmap-border: #163a19;
+  --step1-color: #ac7f5e;
+  --nota1-color: #163a19;
+  --nota2-color: #ff8d28;
+  --nota3-color: #ff0004;
+  --muted-accent: #ede2c4;
+  --video-gradient: linear-gradient(180deg, rgba(159,143,107,.5), rgba(111,78,55,.3));
+}
+
+/* Hero */
+.cf-hero { background: var(--page-bg); padding: 48px 0; }
+.cf-hero-grid { display: grid; gap: 40px; align-items: center; }
+.cf-hero-copy { display: flex; flex-direction: column; gap: 20px; }
+.cf-hero-copy .eyebrow span:last-child { font-size: 14px; }
+.cf-hero-copy h1 {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem); line-height: 1.1; letter-spacing: -1.4px;
+  color: var(--heading-hero);
+}
+.cf-hero-copy p { font-size: 18px; line-height: 1.6; color: var(--hero-body); max-width: 34em; }
+
+.cf-buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 4px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 400; }
+.btn-fill { background: var(--btn-fill); color: #502400; }
+.btn-outline { background: none; border: 2px solid var(--btn-outline); color: var(--btn-outline); padding: 16px 32px; }
+
+@media (min-width: 900px) {
+  .cf-hero { padding: 80px 0; }
+  .cf-hero-copy .eyebrow span:last-child { font-size: 16px; }
+  .cf-hero-grid { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+/* Phone mockup (built in CSS — the Figma phone frames have no real crop data,
+   so real screenshots are composited into a CSS-built bezel instead) */
+.phone-stage { position: relative; display: flex; justify-content: center; padding: 24px; }
+.phone-stage::before {
+  content: ''; position: absolute; inset: 10%; border-radius: 50%;
+  background: #9f8f67; filter: blur(60px); opacity: .5; z-index: 0;
+}
+.phone-frame {
+  position: relative; z-index: 1; width: 240px; aspect-ratio: 9 / 19.5;
+  background: #111; border-radius: 36px; padding: 10px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}
+.phone-frame::before {
+  content: ''; position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+  width: 70px; height: 18px; background: #111; border-radius: 0 0 12px 12px; z-index: 2;
+}
+.phone-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 26px; display: block; }
+.phone-frame--tilt { transform: rotate(6deg); }
+
+/* Roadmap steps */
+.roadmap {
+  background: var(--finalidade-panel-bg); border: 1px solid var(--roadmap-border);
+  border-radius: var(--radius-md); padding: 32px; margin: 0 20px;
+}
+.roadmap-grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
+.step { display: flex; flex-direction: column; gap: 8px; }
+.step-badge {
+  width: 80px; height: 80px; border-radius: 50%; border: 2px solid; background: var(--page-bg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 24px;
+}
+.step-badge--1 { border-color: var(--step1-color); color: var(--step1-color); }
+.step-badge--2 { border-color: var(--step2-color); color: var(--step2-color); }
+.step-badge--3 { border-color: var(--step3-color); color: var(--step3-color); }
+.step-badge--4 { border-color: var(--step4-color); color: var(--step4-color); }
+.step h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; color: #ede2c4; margin-top: 8px; }
+.step p { font-size: 14px; line-height: 20px; color: #c2c8bd; }
+
+@media (min-width: 860px) {
+  .roadmap { margin: 0; padding: 48px; }
+  .roadmap-grid { grid-template-columns: repeat(4, 1fr); position: relative; }
+  .roadmap-grid::before {
+    content: ''; position: absolute; top: 40px; left: 40px; right: 40px; height: 1px; background: var(--green-pale);
+  }
+}
+
+/* Video section */
+.video-section { padding: 48px 0; }
+.video-panel { background: var(--video-gradient); border-radius: var(--radius-md); padding: 32px 20px; text-align: center; }
+.video-title { font-size: 28px; font-weight: 600; color: var(--muted-accent); margin-bottom: 24px; }
+.video-frame {
+  max-width: 805px; margin: 0 auto; aspect-ratio: 805 / 397; background: #d9d9d9;
+  border: 1px solid #000; border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.video-frame svg { width: 56px; height: 56px; opacity: .5; }
+
+@media (min-width: 900px) {
+  .video-panel { padding: 80px 48px; }
+  .video-title { font-size: 48px; }
+}
+
+/* Nota fiscal section */
+.nota-section { padding: 48px 0; }
+.nota-panel { background: var(--finalidade-panel-bg); border-radius: var(--radius-md); padding: 32px 20px; }
+.nota-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; display: flex; flex-direction: column; gap: 16px; }
+.nota-heading h2 { font-size: 28px; font-weight: 600; color: var(--muted-accent); }
+.nota-heading p { font-size: 16px; line-height: 1.6; color: var(--muted-accent); }
+
+.nota-grid { display: grid; gap: 40px; align-items: center; }
+.nota-steps { display: flex; flex-direction: column; gap: 32px; }
+.nota-badge {
+  width: 80px; height: 80px; border-radius: 50%; border: 2px solid; background: var(--page-bg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 24px; margin-bottom: 8px;
+}
+.nota-badge--1 { border-color: var(--nota1-color); color: var(--nota1-color); }
+.nota-badge--2 { border-color: var(--nota2-color); color: var(--nota2-color); }
+.nota-badge--3 { border-color: var(--nota3-color); color: var(--nota3-color); }
+.nota-steps h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; color: #ede2c4; margin-bottom: 8px; }
+.nota-steps p { font-size: 14px; line-height: 20px; color: #c2c8bd; }
+
+@media (min-width: 900px) {
+  .nota-panel { padding: 48px; }
+  .nota-heading h2 { font-size: 48px; }
+  .nota-heading p { font-size: 18px; }
+  .nota-grid { grid-template-columns: 1fr 1fr; }
+}

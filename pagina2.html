@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Funciona — IntelliCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pagina2.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">INTELLICART</a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html" class="active">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+        <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+      </button>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <span class="mobile-menu-handle"></span>
+    <p class="mobile-menu-title">INTELLICART</p>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html" class="active">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <section class="cf-hero">
+    <div class="container cf-hero-grid">
+      <div class="cf-hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Compre com inteligência</span>
+        </div>
+        <h1>Página de instrução</h1>
+        <p>O sistema foi desenvolvido para proporcionar uma experiência prática e moderna dentro do supermercado. Siga o passo a passo:</p>
+        <div class="cf-buttons">
+          <a href="componentes.html" class="btn btn-fill">Ver produto</a>
+          <a href="#pecas" class="btn btn-outline">Ver peças</a>
+        </div>
+      </div>
+      <div class="phone-stage">
+        <div class="phone-frame phone-frame--tilt">
+          <img src="imagens/phone-screen-login.png" alt="Tela demonstrativa do aplicativo IntelliCart">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="roadmap">
+      <div class="roadmap-grid">
+        <div class="step">
+          <div class="step-badge step-badge--1">01</div>
+          <h3>Inicie sua compra</h3>
+          <p>Ao entrar no supermercado, o cliente seleciona um carrinho IntelliCart disponível e realiza o login pelo sistema utilizando QR Code, aplicativo ou identificação digital.</p>
+        </div>
+        <div class="step">
+          <div class="step-badge step-badge--2">02</div>
+          <h3>Escaneie os produtos</h3>
+          <p>Durante as compras, basta aproximar o produto do leitor integrado ao carrinho. O item será automaticamente identificado e adicionado à lista de compras.</p>
+        </div>
+        <div class="step">
+          <div class="step-badge step-badge--3">03</div>
+          <h3>Acompanhe as informações em tempo real</h3>
+          <p>Ao concluir as compras, o cliente seleciona a opção de finalizar pagamento diretamente no sistema, sem necessidade de enfrentar filas tradicionais.</p>
+        </div>
+        <div class="step">
+          <div class="step-badge step-badge--4">04</div>
+          <h3>Finalize a compra</h3>
+          <p>Ao concluir as compras, o cliente seleciona a opção de finalizar pagamento diretamente no sistema, sem necessidade de enfrentar filas tradicionais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nota-section" id="pecas">
+    <div class="container">
+      <div class="nota-panel">
+        <div class="nota-heading">
+          <h2>Sistema de Nota Fiscal Inteligente</h2>
+          <p>O IntelliCart também conta com um sistema moderno de emissão de nota fiscal digital, trazendo mais praticidade, organização e sustentabilidade para o processo de compra.</p>
+        </div>
+        <div class="nota-grid">
+          <div class="nota-steps">
+            <div>
+              <div class="nota-badge nota-badge--1">01</div>
+              <h3>Finalização da compra</h3>
+              <p>Após adicionar todos os produtos ao carrinho inteligente, o cliente seleciona a opção "Finalizar Compra" diretamente na tela do IntelliCart.</p>
+            </div>
+            <div>
+              <div class="nota-badge nota-badge--2">02</div>
+              <h3>Confirmação do pagamento</h3>
+              <p>O sistema realiza a confirmação do pagamento de forma rápida e segura, utilizando os métodos disponíveis no supermercado.</p>
+            </div>
+            <div>
+              <div class="nota-badge nota-badge--3">03</div>
+              <h3>Geração automática da nota fiscal</h3>
+              <p>Assim que o pagamento é aprovado, o IntelliCart gera automaticamente a nota fiscal digital contendo todas as informações da compra, como produtos, quantidades, valores e horário da transação.</p>
+            </div>
+          </div>
+          <div class="phone-stage">
+            <div class="phone-frame">
+              <img src="imagens/Prototipo cllr ebaa.png" alt="Tela de nota fiscal digital do IntelliCart, com total da compra e confirmação de pagamento">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="container">
+      <div class="video-panel">
+        <h2 class="video-title">Vídeo demonstrativo</h2>
+        <div class="video-frame">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
+        <span>INTELLICART</span>
+      </div>
+      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+      </ul>
+      <ul>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+      </ul>
+      <ul>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-team">
+      <h4>Integrantes</h4>
+      <ul>
+        <li>Sophia Leal</li>
+        <li>Guilherme Carvalho</li>
+        <li>Roberta Vitória</li>
+        <li>Matheus Lima</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="pagina2.js"></script>
+</body>
+</html>

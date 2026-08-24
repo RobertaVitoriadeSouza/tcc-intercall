@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IntelliCart — Sistema Inteligente de Carrinho Automatizado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pagina1.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">INTELLICART</a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+        <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+      </button>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <span class="mobile-menu-handle"></span>
+    <p class="mobile-menu-title">INTELLICART</p>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Sistema Inteligente de Carrinho Automatizado para Supermercados</span>
+        </div>
+        <h1>O futuro das compras inteligentes começa aqui.</h1>
+        <p>Chega de filas demoradas, atrasos no caixa e compras cansativas. O IntelliCart foi criado para transformar completamente a experiência dentro dos supermercados, trazendo mais praticidade, tecnologia e autonomia para os clientes.</p>
+      </div>
+      <div class="hero-media">
+        <img src="imagens/hero-carrinho.png" alt="Carrinho de compras inteligente IntelliCart" width="584" height="584">
+      </div>
+    </div>
+  </section>
+
+  <section class="bento">
+    <div class="container">
+      <div class="bento-heading">
+        <h2>A Nova Jornada do Cliente</h2>
+        <p>Desenvolvemos cada interação para ser intuitiva, rápida e transparente, focando no que realmente importa: sua conveniência.</p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="card card-diferencial">
+          <img src="imagens/icon-basket.svg" alt="" class="card-icon" width="33" height="29">
+          <h3>Diferencial do Projeto</h3>
+          <p>O grande diferencial do IntelliCart está na união entre tecnologia e praticidade. Enquanto os supermercados tradicionais ainda dependem de longas filas e processos manuais, o IntelliCart oferece uma solução inteligente que reduz o tempo de espera e melhora a experiência do consumidor.</p>
+          <a href="#" class="link-arrow">Saber mais <img src="imagens/icon-arrow.svg" alt="" width="16" height="16"></a>
+        </article>
+
+        <article class="card card-stat">
+          <p class="stat-value">-85%</p>
+          <p class="stat-label">Tempo de Espera</p>
+          <p class="stat-desc">Redução média no tempo total de compra em mercados parceiros.</p>
+        </article>
+
+        <article class="card card-security">
+          <img src="imagens/icon-shield.svg" alt="" class="card-icon" width="24" height="30">
+          <h3>Segurança</h3>
+          <p>Além disso, o sistema conta com integração digital, tela interativa e funcionalidades automatizadas que tornam as compras mais rápidas, organizadas e seguras.</p>
+        </article>
+
+        <figure class="card card-photo">
+          <img src="imagens/secao-loja.png" alt="Cliente utilizando o carrinho inteligente em corredor de supermercado">
+          <figcaption>Experiência Visual e Tátil Premium</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="publico-alvo">
+    <div class="container publico-grid">
+      <div class="publico-media">
+        <img src="imagens/secao-publico-alvo.png" alt="Pessoa fazendo compras com o carrinho inteligente IntelliCart">
+      </div>
+      <div class="publico-copy">
+        <h2>Público Alvo</h2>
+        <div class="publico-item">
+          <span class="publico-icon"><img src="imagens/icon-quote.svg" alt="" width="16" height="16"></span>
+          <p>O IntelliCart é voltado para consumidores que buscam praticidade no dia a dia, especialmente pessoas com rotina agitada que desejam economizar tempo durante as compras.</p>
+        </div>
+        <div class="publico-item">
+          <span class="publico-icon"><img src="imagens/icon-book.svg" alt="" width="19" height="18"></span>
+          <p>O projeto também atende supermercados que desejam inovar, modernizar seus serviços e oferecer uma experiência tecnológica aos clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="finalidade">
+    <div class="container">
+      <div class="finalidade-panel">
+        <div class="finalidade-copy">
+          <h2>Finalidade da Proposta</h2>
+          <p>Essa inovação transforma a experiência dentro dos supermercados, unindo tecnologia, praticidade e inovação em uma única solução. Mais do que apenas agilizar o pagamento, o projeto busca oferecer uma experiência moderna, confortável e eficiente para os consumidores, reduzindo o tempo perdido em filas e tornando o processo de compra mais simples e intuitivo.</p>
+          <p>Com isso, o projeto pretende não apenas modernizar os supermercados, mas também fortalecer a conexão entre empresa e cliente, oferecendo uma experiência diferenciada, inovadora e alinhada ao futuro do varejo.</p>
+        </div>
+        <div class="finalidade-highlight">
+          <h3>O Crescimento do Autoatendimento no Brasil</h3>
+          <p>Em um mercado cada vez mais tecnológico, o IntelliCart surge como uma solução inovadora para transformar a experiência de compra. Com o crescimento do uso de sistemas de autoatendimento — já utilizados por 63% dos brasileiros — o projeto busca oferecer mais praticidade, rapidez e eficiência dentro dos supermercados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
+        <span>INTELLICART</span>
+      </div>
+      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+      </ul>
+      <ul>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+      </ul>
+      <ul>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-team">
+      <h4>Integrantes</h4>
+      <ul>
+        <li>Sophia Leal</li>
+        <li>Guilherme Carvalho</li>
+        <li>Roberta Vitória</li>
+        <li>Matheus Lima</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="pagina1.js"></script>
+</body>
+</html>
