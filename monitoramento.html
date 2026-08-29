@@ -84,7 +84,7 @@
           <span>Deletar</span>
         </div>
 
-        <div class="monit-row">
+        <div class="monit-row" data-unit-price="6.00">
           <span class="monit-product">
             <span class="monit-thumb" style="background:#ffe4d6">🍎</span>
             Maçã Fuji
@@ -98,7 +98,7 @@
           <button type="button" class="monit-remove" aria-label="Remover Maçã Fuji">✕</button>
         </div>
 
-        <div class="monit-row">
+        <div class="monit-row" data-unit-price="9.50">
           <span class="monit-product">
             <span class="monit-thumb" style="background:#ffd6d6">🍓</span>
             Bandj. Morango
@@ -112,7 +112,7 @@
           <button type="button" class="monit-remove" aria-label="Remover Bandeja de Morango">✕</button>
         </div>
 
-        <div class="monit-row">
+        <div class="monit-row" data-unit-price="20.56">
           <span class="monit-product">
             <span class="monit-thumb" style="background:#eef0f2">🥛</span>
             Leite Int. 1L
@@ -126,22 +126,94 @@
           <button type="button" class="monit-remove" aria-label="Remover Leite Integral 1L">✕</button>
         </div>
 
-        <h2 class="monit-suggest-title">Sugestões para você</h2>
-        <div class="monit-suggest-grid">
-          <div class="monit-suggest-card">
-            <span class="monit-thumb monit-thumb--lg" style="background:#c9ecd8">🍒</span>
-            <p>Cereja 500g</p>
-            <div class="monit-suggest-foot">
-              <span>R$ 20,00</span>
-              <button type="button" aria-label="Adicionar Cereja ao carrinho">🛒</button>
-            </div>
+        <div class="monit-suggest-head">
+          <h2 class="monit-suggest-title">Sugestões para você</h2>
+          <div class="monit-carousel-nav">
+            <button type="button" class="monit-carousel-btn monit-carousel-prev" aria-label="Ver sugestões anteriores">‹</button>
+            <button type="button" class="monit-carousel-btn monit-carousel-next" aria-label="Ver mais sugestões">›</button>
           </div>
-          <div class="monit-suggest-card">
-            <span class="monit-thumb monit-thumb--lg" style="background:#cfe6f7">🍊</span>
-            <p>Mexerica 1kg</p>
-            <div class="monit-suggest-foot">
-              <span>R$ 6,00</span>
-              <button type="button" aria-label="Adicionar Mexerica ao carrinho">🛒</button>
+        </div>
+        <div class="monit-suggest-carousel">
+          <div class="monit-suggest-track">
+            <div class="monit-suggest-card" data-name="Cereja 500g" data-price="20.00">
+              <span class="monit-thumb monit-thumb--lg" style="background:#c9ecd8">🍒</span>
+              <p>Cereja 500g</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 20,00</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Cereja 500g ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Mexerica 1kg" data-price="6.00">
+              <span class="monit-thumb monit-thumb--lg" style="background:#cfe6f7">🍊</span>
+              <p>Mexerica 1kg</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 6,00</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Mexerica 1kg ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Abacaxi uni." data-price="9.00">
+              <span class="monit-thumb monit-thumb--lg" style="background:#fbf2c4">🍍</span>
+              <p>Abacaxi uni.</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 9,00</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Abacaxi uni. ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Carne 1kg" data-price="30.00">
+              <span class="monit-thumb monit-thumb--lg" style="background:#f6d3d3">🥩</span>
+              <p>Carne 1kg</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 30,00</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Carne 1kg ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Batata 1kg" data-price="8.00">
+              <span class="monit-thumb monit-thumb--lg" style="background:#f2e4c9">🥔</span>
+              <p>Batata 1kg</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 8,00</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Batata 1kg ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Cenoura 1kg" data-price="5.00">
+              <span class="monit-thumb monit-thumb--lg" style="background:#f9ddc0">🥕</span>
+              <p>Cenoura 1kg</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 5,00</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Cenoura 1kg ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Kitkat uni." data-price="5.76">
+              <span class="monit-thumb monit-thumb--lg" style="background:#e3d3c4">🍫</span>
+              <p>Kitkat uni.</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 5,76</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Kitkat uni. ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Vinho tinto" data-price="65.20">
+              <span class="monit-thumb monit-thumb--lg" style="background:#e6cdd8">🍷</span>
+              <p>Vinho tinto</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 65,20</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Vinho tinto ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Água sem gás" data-price="2.20">
+              <span class="monit-thumb monit-thumb--lg" style="background:#d3e8f2">💧</span>
+              <p>Água sem gás</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 2,20</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Água sem gás ao carrinho">🛒</button>
+              </div>
+            </div>
+            <div class="monit-suggest-card" data-name="Doritos wasabi" data-price="12.40">
+              <span class="monit-thumb monit-thumb--lg" style="background:#dcecc4">🌶️</span>
+              <p>Doritos wasabi</p>
+              <div class="monit-suggest-foot">
+                <span>R$ 12,40</span>
+                <button type="button" class="monit-add-btn" aria-label="Adicionar Doritos wasabi ao carrinho">🛒</button>
+              </div>
             </div>
           </div>
         </div>
@@ -170,43 +242,35 @@
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
-        <span>INTELLICART</span>
-      </div>
-      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+<footer>
+    <div class="footer-logo">
+        <img src="imagens/Intellicart  (traced).png" alt="Intellicart Logo">
     </div>
 
-    <nav class="footer-nav" aria-label="Links do rodapé">
-      <ul>
-        <li><a href="pagina1.html">Home</a></li>
-        <li><a href="pagina2.html">Como Funciona</a></li>
-        <li><a href="componentes.html">Produto</a></li>
-      </ul>
-      <ul>
-        <li><a href="jogo.html">Jogo</a></li>
-        <li><a href="referencias.html">Referências</a></li>
-        <li><a href="nos.html">Sobre nós</a></li>
-      </ul>
-      <ul>
-        <li><a href="monitoramento.html">Monitoramento</a></li>
-        <li><a href="relatorio.html">Relatório</a></li>
-      </ul>
-    </nav>
+    <div class="footer-info">
+        <h2>INTELLICART</h2>
+        <h3>SISTEMA INTELIGENTE DE CARRINHO AUTOMATIZADO PARA SUPERMERCADOS</h3>
 
+        <div class="footer-links">
+            <a href="pagina1.html">Home</a>
+            <a href="jogo.html">Jogo</a>
+            <a href="monitoramento.html">Monitoramento</a>
+            <a href="pagina2.html">Como funciona</a>
+            <a href="referencias.html">Referências</a>
+            <a href="relatorio.html">Relatório</a>
+            <a href="componentes.html">Produto</a>
+            <a href="nos.html">Sobre nós</a>
+        </div>
+    </div>
     <div class="footer-team">
-      <h4>Integrantes</h4>
-      <ul>
-        <li>Sophia Leal</li>
-        <li>Guilherme Carvalho</li>
-        <li>Roberta Vitória</li>
-        <li>Matheus Lima</li>
-      </ul>
+        <h2>INTEGRANTES</h2>
+        <div class="team-list">
+            <p>Sophia Leal</p>
+            <p>Guilherme Carvalho</p>
+            <p>Roberta Vitória</p>
+            <p>Matheus Lima</p>
+        </div>
     </div>
-  </div>
 </footer>
 
 <script src="script.js"></script>

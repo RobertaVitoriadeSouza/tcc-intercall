@@ -83,6 +83,7 @@
 .roadmap-grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
 .step { display: flex; flex-direction: column; gap: 8px; }
 .step-badge {
+  position: relative; z-index: 1;
   width: 80px; height: 80px; border-radius: 50%; border: 2px solid; background: var(--page-bg);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 24px;
@@ -98,7 +99,7 @@
   .roadmap { margin: 0; padding: 48px; }
   .roadmap-grid { grid-template-columns: repeat(4, 1fr); position: relative; }
   .roadmap-grid::before {
-    content: ''; position: absolute; top: 40px; left: 40px; right: 40px; height: 1px; background: var(--green-pale);
+    content: ''; position: absolute; z-index: 0; top: 40px; left: 40px; width: calc(75% + 24px); height: 1px; background: var(--green-pale);
   }
 }
 

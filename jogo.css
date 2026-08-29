@@ -302,6 +302,34 @@
   object-position: right;
 }
 
+/* Composição exata do Figma (Section - User Journey Visualization):
+   as 3 fotos formam um colagem assimétrica, não uma fileira única —
+   a foto alta fica à direita, deslocada para cima em relação às outras duas. */
+@media (min-width: 900px) {
+  .jogo-gallery {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 995 / 423;
+  }
+
+  .jogo-gallery img {
+    position: absolute;
+  }
+
+  .jogo-gallery img:nth-child(1) {
+    left: 0%; top: 43.26%; width: 30.15%; height: 56.74%;
+  }
+
+  .jogo-gallery img:nth-child(2) {
+    left: 36.38%; top: 43.26%; width: 27.74%; height: 56.74%;
+  }
+
+  .jogo-gallery .gallery-tall {
+    left: 78.59%; top: 0%; width: 21.41%; height: 73.76%;
+  }
+}
+
 
 /* =========================================================
    FASES

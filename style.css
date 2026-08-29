@@ -207,34 +207,80 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* =========================================================
    Footer
    ========================================================= */
-.site-footer { background: var(--header-bg); padding: 48px 0; }
-.footer-grid { display: grid; gap: 40px; }
-.footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-.footer-logo-mark { width: 133px; height: 133px; flex: none; }
-.footer-logo span {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 24px;
-  letter-spacing: -1.2px; color: #fafaf9;
-}
-.footer-brand p {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 16px;
-  letter-spacing: 1.6px; color: #5f6910; max-width: 320px;
+footer {
+    background-color: #022C22;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    gap: 2.5rem;
 }
 
-.footer-nav { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.footer-nav ul { display: flex; flex-direction: column; gap: 16px; }
-.footer-nav a { font-size: 16px; font-weight: 500; letter-spacing: -0.4px; color: #e7e5e4; }
-.footer-nav a:hover { color: var(--orange); }
-
-.footer-team h4 {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 24px;
-  letter-spacing: 1.6px; color: #fafaf9; margin-bottom: 16px;
+.footer-logo img {
+    width: 4rem;
+    height: auto;
+    display: block;
 }
-.footer-team ul { display: flex; flex-direction: column; gap: 12px; }
-.footer-team li { font-size: 16px; font-weight: 500; color: #e7e5e4; }
 
-@media (min-width: 700px) {
-  .footer-grid { grid-template-columns: 1.2fr 1.4fr 1fr; }
+.footer-info {
+    margin-left: 0;
 }
-@media (min-width: 1100px) {
-  .footer-nav { grid-template-columns: repeat(3, 1fr); }
+
+.footer-info h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.footer-info h3 {
+    color: #8C9B46;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 2.5rem;
+    row-gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #FF6B35;
+}
+
+.footer-team {
+    margin-left: 0;
+}
+
+.footer-team h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+}
+
+.team-list p {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+    footer { flex-direction: column; align-items: flex-start; }
+    .footer-links { grid-template-columns: repeat(2, auto); }
 }
