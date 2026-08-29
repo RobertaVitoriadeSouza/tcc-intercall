@@ -135,17 +135,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
 .theme-toggle {
-  width: clamp(110px, 30vw, 158px);
-  aspect-ratio: 158 / 66;
+  position: relative;
+  width: clamp(68px, 16vw, 86px);
+  height: 38px;
   display: flex; align-items: center; justify-content: center;
   padding: 0;
-  border-radius: var(--radius-pill);
   flex: none;
   transition: transform .15s ease;
 }
 .theme-toggle:hover { transform: scale(1.04); }
 .theme-toggle:active { transform: scale(.97); }
-.toggle-img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-pill); }
+.toggle-img {
+  position: absolute;
+  width: 100%; height: 100%; object-fit: contain; object-position: center;
+}
 .toggle-img-light { display: none; }
 [data-theme="light"] .toggle-img-dark { display: none; }
 [data-theme="light"] .toggle-img-light { display: block; }

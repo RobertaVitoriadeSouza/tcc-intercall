@@ -1,0 +1,91 @@
+/* =========================================================
+   nos.html — Sobre Nós
+   Depende das variáveis e do reset definidos em style.css
+   ========================================================= */
+
+[data-theme="dark"] {
+  --nos-bg: #17230c;
+  --nos-heading: #ede2c4;
+  --nos-team-name: #ede2c4;
+  --nos-team-handle: #c2c8bd;
+  --nos-card-bg: #424940;
+  --nos-label: #8c9389;
+  --nos-input-bg: #8c9389;
+  --nos-placeholder: #e7e5e4;
+}
+
+[data-theme="light"] {
+  --nos-bg: #ede2c4;
+  --nos-heading: #1f4400;
+  --nos-team-name: #1f4400;
+  --nos-team-handle: #4a5c2e;
+  --nos-card-bg: #ffffff;
+  --nos-label: #726840;
+  --nos-input-bg: #726840;
+  --nos-placeholder: #ede2c4;
+}
+
+.nos-page { background: var(--nos-bg); padding: 48px 0 64px; }
+.nos-page h1 {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem); letter-spacing: -1.4px;
+  color: var(--nos-heading); margin-bottom: 40px;
+}
+
+/* Team */
+.nos-team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 56px;
+}
+.nos-member { text-align: center; }
+.nos-member img {
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  margin: 0 auto 16px; border: 2px solid var(--lime);
+}
+.nos-member-name {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;
+  letter-spacing: .5px; text-transform: uppercase; color: var(--nos-team-name);
+}
+.nos-member-handle { font-size: 14px; color: var(--nos-team-handle); margin-top: 4px; }
+
+@media (min-width: 700px) {
+  .nos-team { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+}
+
+/* Contact card */
+.nos-contact-card {
+  background: var(--nos-card-bg);
+  border-radius: 40px;
+  padding: 32px 24px;
+  max-width: 760px;
+}
+.nos-contact-card h2 {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 24px;
+  color: var(--nos-label); margin-bottom: 24px;
+}
+
+.nos-form { display: flex; flex-direction: column; gap: 20px; }
+.nos-field { display: flex; flex-direction: column; gap: 8px; }
+.nos-field label {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px; color: var(--nos-label);
+}
+.nos-field input, .nos-field textarea {
+  border: none; border-radius: 20px; background: var(--nos-input-bg);
+  padding: 16px 20px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 15px;
+  color: var(--nos-placeholder);
+}
+.nos-field input::placeholder, .nos-field textarea::placeholder { color: var(--nos-placeholder); opacity: 1; }
+.nos-field textarea { min-height: 140px; resize: vertical; font-family: inherit; }
+
+.nos-btn-enviar {
+  align-self: flex-start;
+  background: var(--orange); color: #fff;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
+  padding: 14px 32px; border-radius: 15px;
+}
+
+@media (min-width: 700px) {
+  .nos-contact-card { padding: 40px; }
+}

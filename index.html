@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=login.html">
-<title>IntelliCart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — IntelliCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
 </head>
-<body>
-<p>Redirecionando para <a href="login.html">a página de login</a>...</p>
+<body class="login-body">
+
+<button type="button" class="theme-toggle login-theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+  <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+  <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+</button>
+
+<main class="login-page">
+  <div class="login-illustration">
+    <span class="login-blob login-blob--1"></span>
+    <span class="login-blob login-blob--2"></span>
+    <img src="imagens/login-illustration.png" alt="Ilustração de pessoa correndo com um carrinho de compras e etiquetas de desconto">
+  </div>
+
+  <div class="login-form-panel">
+    <a href="index.html" class="login-logo">INTELLICART</a>
+
+    <form class="login-form">
+      <h1>LOGIN</h1>
+      <p class="login-error" id="loginError" role="alert" hidden></p>
+
+      <div class="login-field">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="login-field">
+        <div class="login-field-head">
+          <label for="loginSenha">Senha</label>
+          <a href="#" class="login-forgot">Esqueceu a senha?</a>
+        </div>
+        <input type="password" id="loginSenha" name="senha" autocomplete="current-password" required>
+      </div>
+
+      <button type="submit" class="login-btn-entrar">Entrar</button>
+
+      <div class="login-divider"><span></span>Ou<span></span></div>
+
+      <button type="button" class="login-btn-social">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M16.365 1.43c0 1.14-.42 2.06-1.26 2.87-.89.86-1.99 1.36-3.05 1.28-.13-1.07.36-2.21 1.2-3.05.85-.87 2.11-1.4 3.11-1.1zM20.1 17.36c-.55 1.25-.81 1.8-1.51 2.9-.99 1.55-2.38 3.48-4.11 3.5-1.54.02-1.94-1.02-4.03-1.01-2.09.01-2.53 1.03-4.07 1.01-1.73-.02-3.05-1.75-4.04-3.3-2.77-4.3-3.06-9.35-1.35-12.03 1.21-1.9 3.12-3.01 4.91-3.01 1.82 0 2.97 1 4.48 1 1.46 0 2.35-1 4.48-1 1.6 0 3.29.87 4.5 2.38-3.95 2.17-3.31 7.83.74 9.56z"/></svg>
+        Logar com Apple
+      </button>
+
+      <button type="button" class="login-btn-social">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.66-.22-2.45H12v4.63h6.47c-.28 1.5-1.13 2.77-2.4 3.63v3.02h3.88c2.27-2.09 3.57-5.17 3.57-8.83z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.07 7.94-2.9l-3.88-3.02c-1.08.72-2.45 1.15-4.06 1.15-3.12 0-5.77-2.11-6.71-4.94H1.28v3.11C3.26 21.3 7.31 24 12 24z"/>
+          <path fill="#FBBC05" d="M5.29 14.29A7.2 7.2 0 0 1 4.91 12c0-.79.14-1.56.38-2.29V6.6H1.28A11.98 11.98 0 0 0 0 12c0 1.94.46 3.77 1.28 5.4z"/>
+          <path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.45-3.45C17.94 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.28 6.6l4.01 3.11C6.23 6.88 8.88 4.77 12 4.77z"/>
+        </svg>
+        Logar com Google
+      </button>
+
+      <p class="login-signup">Não tem conta? <a href="conta.html">Criar conta</a></p>
+    </form>
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script src="login.js"></script>
 </body>
 </html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitoramento — IntelliCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="monitoramento.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">INTELLICART</a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="pagina1.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html" class="active">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+        <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+      </button>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <span class="mobile-menu-handle"></span>
+    <p class="mobile-menu-title">INTELLICART</p>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="pagina1.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html" class="active">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main class="monit-page">
+  <div class="container">
+
+    <div class="monit-head">
+      <div>
+        <p class="monit-eyebrow">Smart Cart</p>
+        <h1>Olá, Usuário</h1>
+      </div>
+      <div class="monit-battery">
+        <span>Bateria Status:</span>
+        <span class="monit-battery-pill">75%</span>
+      </div>
+    </div>
+
+    <div class="monit-grid">
+      <div class="monit-products">
+        <div class="monit-table-head">
+          <span>Produto</span>
+          <span>Qnt.</span>
+          <span>Total</span>
+          <span>Deletar</span>
+        </div>
+
+        <div class="monit-row">
+          <span class="monit-product">
+            <span class="monit-thumb" style="background:#ffe4d6">🍎</span>
+            Maçã Fuji
+          </span>
+          <span class="monit-qty">
+            <button type="button" aria-label="Diminuir">−</button>
+            <span>1</span>
+            <button type="button" aria-label="Aumentar">+</button>
+          </span>
+          <span class="monit-total">R$ 6,00</span>
+          <button type="button" class="monit-remove" aria-label="Remover Maçã Fuji">✕</button>
+        </div>
+
+        <div class="monit-row">
+          <span class="monit-product">
+            <span class="monit-thumb" style="background:#ffd6d6">🍓</span>
+            Bandj. Morango
+          </span>
+          <span class="monit-qty">
+            <button type="button" aria-label="Diminuir">−</button>
+            <span>1</span>
+            <button type="button" aria-label="Aumentar">+</button>
+          </span>
+          <span class="monit-total">R$ 9,50</span>
+          <button type="button" class="monit-remove" aria-label="Remover Bandeja de Morango">✕</button>
+        </div>
+
+        <div class="monit-row">
+          <span class="monit-product">
+            <span class="monit-thumb" style="background:#eef0f2">🥛</span>
+            Leite Int. 1L
+          </span>
+          <span class="monit-qty">
+            <button type="button" aria-label="Diminuir">−</button>
+            <span>1</span>
+            <button type="button" aria-label="Aumentar">+</button>
+          </span>
+          <span class="monit-total">R$ 20,56</span>
+          <button type="button" class="monit-remove" aria-label="Remover Leite Integral 1L">✕</button>
+        </div>
+
+        <h2 class="monit-suggest-title">Sugestões para você</h2>
+        <div class="monit-suggest-grid">
+          <div class="monit-suggest-card">
+            <span class="monit-thumb monit-thumb--lg" style="background:#c9ecd8">🍒</span>
+            <p>Cereja 500g</p>
+            <div class="monit-suggest-foot">
+              <span>R$ 20,00</span>
+              <button type="button" aria-label="Adicionar Cereja ao carrinho">🛒</button>
+            </div>
+          </div>
+          <div class="monit-suggest-card">
+            <span class="monit-thumb monit-thumb--lg" style="background:#cfe6f7">🍊</span>
+            <p>Mexerica 1kg</p>
+            <div class="monit-suggest-foot">
+              <span>R$ 6,00</span>
+              <button type="button" aria-label="Adicionar Mexerica ao carrinho">🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="monit-total-card">
+        <h2>Total</h2>
+        <div class="monit-total-line">
+          <span>Sub total</span>
+          <span>R$ 36,06</span>
+        </div>
+        <div class="monit-total-line">
+          <span>Descontos</span>
+          <span>R$ 00,00</span>
+        </div>
+        <div class="monit-total-divider"></div>
+        <div class="monit-total-line monit-total-line--big">
+          <span>Total</span>
+          <span>R$ 36,06</span>
+        </div>
+        <p class="monit-total-note">Nota fiscal da compra emitida no próprio carrinho.</p>
+        <button type="button" class="monit-btn-finalizar">Finalizar Compra</button>
+      </aside>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
+        <span>INTELLICART</span>
+      </div>
+      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        <li><a href="pagina1.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+      </ul>
+      <ul>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="nos.html">Sobre nós</a></li>
+      </ul>
+      <ul>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-team">
+      <h4>Integrantes</h4>
+      <ul>
+        <li>Sophia Leal</li>
+        <li>Guilherme Carvalho</li>
+        <li>Roberta Vitória</li>
+        <li>Matheus Lima</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="monitoramento.js"></script>
+</body>
+</html>

@@ -1,109 +1,547 @@
-/* =========================================================
-   jogo.html — "Turno da Noite: Quem é o Ladrão?"
-   Depende das variáveis e do reset definidos em style.css
-   ========================================================= */
-
 [data-theme="dark"] {
-  --jogo-hero-bg: radial-gradient(circle at 30% 20%, #1f4a24, #120e01 70%);
+
+  --jogo-hero-bg: radial-gradient(
+    circle at 30% 20%,
+    #1f4a24,
+    #120e01 70%
+  );
+
   --jogo-heading: #ececec;
   --jogo-body: #ececec;
   --jogo-journey-bg: #17230c;
   --jogo-btn1-text: #ececec;
   --jogo-btn2-text: #c3cf5a;
-  --jogo-video-bg: radial-gradient(circle at 50% 30%, #1f4a24, #120e01 75%);
+
+  --jogo-video-bg: radial-gradient(
+    circle at 50% 30%,
+    #1f4a24,
+    #120e01 75%
+  );
 }
 
 [data-theme="light"] {
-  --jogo-hero-bg: radial-gradient(circle at 30% 20%, #b3a67d, #9f8f67 70%);
+
+  --jogo-hero-bg: radial-gradient(
+    circle at 30% 20%,
+    #b3a67d,
+    #9f8f67 70%
+  );
+
   --jogo-heading: #163a19;
   --jogo-body: #1f4400;
   --jogo-journey-bg: #ede2c4;
   --jogo-btn1-text: #1f4400;
   --jogo-btn2-text: #1f4400;
-  --jogo-video-bg: radial-gradient(circle at 50% 30%, #cdbf95, #9f8f67 75%);
+
+  --jogo-video-bg: radial-gradient(
+    circle at 50% 30%,
+    #cdbf95,
+    #9f8f67 75%
+  );
 }
 
-/* Hero */
-.jogo-hero { background: var(--jogo-hero-bg); padding: 56px 0; }
-.jogo-hero-grid { display: grid; gap: 40px; align-items: center; }
-.jogo-hero-copy { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.jogo-hero {
+  background: var(--jogo-hero-bg);
+  padding: 70px 0;
+}
+
+.jogo-hero-grid {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.jogo-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 500px;
+}
 
 .jogo-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--lime); color: #1f4400;
-  border-radius: var(--radius-pill); padding: 6px 16px;
-  font-size: 14px; font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--lime);
+  color: #1f4400;
+
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+
+  font-size: 14px;
+  font-weight: 500;
 }
+
 .jogo-badge::before {
-  content: ''; width: 8px; height: 8px; border-radius: 50%; background: #1f4400;
+  content: '';
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #1f4400;
 }
 
 .jogo-hero-copy h1 {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem); line-height: 1.1; letter-spacing: -1.4px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+
+  line-height: 1.1;
+  letter-spacing: -1.4px;
+
   color: var(--jogo-heading);
-}
-.jogo-hero-copy p { font-size: 16px; line-height: 1.5; color: var(--jogo-body); max-width: 34em; }
 
-.jogo-buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 4px; }
-.btn-jogo-fill, .btn-jogo-outline {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 16px 32px; border-radius: var(--radius-md); font-size: 18px;
+  margin: 0;
 }
-.btn-jogo-fill { background: #ec8a3f; color: var(--jogo-btn1-text); }
-.btn-jogo-outline { background: none; border: 2px solid var(--lime); color: var(--jogo-btn2-text); }
 
-.jogo-hero-media img { width: 100%; border-radius: var(--radius-md); box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.jogo-hero-copy p {
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--jogo-body);
+
+  max-width: 34em;
+
+  margin: 0;
+}
+
+.jogo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 4px;
+}
+
+.btn-jogo-fill,
+.btn-jogo-outline {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 16px 32px;
+
+  border-radius: var(--radius-md);
+
+  font-size: 18px;
+}
+
+.btn-jogo-fill {
+  background: #ec8a3f;
+  color: var(--jogo-btn1-text);
+}
+
+.btn-jogo-outline {
+  background: none;
+
+  border: 2px solid var(--lime);
+
+  color: var(--jogo-btn2-text);
+}
+
+
+
+.jogo-hero-media {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
+
+.jogo-hero-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
 
 @media (min-width: 900px) {
-  .jogo-hero { padding: 96px 0 80px; }
-  .jogo-hero-grid { grid-template-columns: 1fr 0.95fr; }
+
+  .jogo-hero {
+    padding: 90px 0 80px;
+  }
+
+  .jogo-hero-grid {
+
+    grid-template-columns: 0.72fr 1.28fr;
+
+    gap: 55px;
+
+    align-items: center;
+  }
+
+  .jogo-hero-copy {
+    max-width: 500px;
+  }
+
+  .jogo-hero-media {
+    width: 100%;
+  }
+
 }
 
-/* Journey / gameplay section */
-.jogo-journey { background: var(--jogo-journey-bg); padding: 56px 0; }
-.jogo-journey-grid { display: grid; gap: 48px; }
+
+/* =========================================================
+   JOURNEY / GAMEPLAY
+   ========================================================= */
+
+.jogo-journey {
+  background: var(--jogo-journey-bg);
+
+  padding: 56px 0;
+}
+
+.jogo-journey-grid {
+
+  display: grid;
+
+  gap: 48px;
+}
 
 .jogo-icon-box {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 64px; height: 64px; border-radius: var(--radius-md);
-  background: var(--green-dark); border: 1px solid var(--lime); color: var(--lime);
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: var(--radius-md);
+
+  background: var(--green-dark);
+
+  border: 1px solid var(--lime);
+
+  color: var(--lime);
+
   margin-bottom: 16px;
 }
 
-.jogo-resumo h2, .jogo-fases h2 {
-  font-family: 'Gajraj One', cursive; font-weight: 400; font-size: 24px;
-  color: #ec8a3f; margin-bottom: 16px;
+.jogo-resumo h2,
+.jogo-fases h2 {
+
+  font-family: 'Gajraj One', cursive;
+
+  font-weight: 400;
+
+  font-size: 24px;
+
+  color: #ec8a3f;
+
+  margin-bottom: 16px;
 }
-.jogo-resumo p { font-size: 15px; line-height: 1.6; font-weight: 600; color: var(--jogo-body); }
 
-.jogo-gallery { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; align-items: flex-start; }
-.jogo-gallery img { border-radius: var(--radius-md); object-fit: cover; }
-.jogo-gallery .gallery-wide { flex: 1 1 220px; min-width: 0; aspect-ratio: 5 / 4; }
-.jogo-gallery .gallery-tall { flex: 0 1 160px; min-width: 0; aspect-ratio: 213 / 312; object-position: right; }
+.jogo-resumo p {
 
-.jogo-fases { padding-top: 8px; border-top: 2px solid var(--lime); }
-.jogo-fase { margin-bottom: 28px; }
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  font-weight: 600;
+
+  color: var(--jogo-body);
+}
+
+.jogo-gallery {
+
+  display: flex;
+
+  gap: 16px;
+
+  margin-top: 24px;
+
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+}
+
+.jogo-gallery img {
+
+  border-radius: var(--radius-md);
+
+  object-fit: cover;
+}
+
+.jogo-gallery .gallery-wide {
+
+  flex: 1 1 220px;
+
+  min-width: 0;
+
+  aspect-ratio: 5 / 4;
+}
+
+.jogo-gallery .gallery-tall {
+
+  flex: 0 1 160px;
+
+  min-width: 0;
+
+  aspect-ratio: 213 / 312;
+
+  object-position: right;
+}
+
+
+/* =========================================================
+   FASES
+   ========================================================= */
+
+.jogo-fases {
+
+  padding-top: 8px;
+
+  border-top: 2px solid var(--lime);
+}
+
+.jogo-fase {
+
+  margin-bottom: 28px;
+}
+
 .jogo-fase h3 {
-  font-family: 'Gajraj One', cursive; font-weight: 400; font-size: 17px;
-  color: #ec8a3f; margin-bottom: 8px;
+
+  font-family: 'Gajraj One', cursive;
+
+  font-weight: 400;
+
+  font-size: 17px;
+
+  color: #ec8a3f;
+
+  margin-bottom: 8px;
 }
-.jogo-fase p { font-size: 14px; line-height: 1.6; font-weight: 600; color: var(--jogo-body); }
+
+.jogo-fase p {
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  font-weight: 600;
+
+  color: var(--jogo-body);
+}
+
+
+/* =========================================================
+   JOURNEY DESKTOP
+   ========================================================= */
 
 @media (min-width: 900px) {
-  .jogo-journey-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
-  .jogo-fases { padding-top: 0; padding-left: 48px; border-top: none; border-left: 2px solid var(--lime); }
+
+  .jogo-journey-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 64px;
+  }
+
+  .jogo-fases {
+
+    padding-top: 0;
+
+    padding-left: 48px;
+
+    border-top: none;
+
+    border-left: 2px solid var(--lime);
+  }
+
 }
 
-/* Video demo */
-.jogo-video { background: var(--jogo-video-bg); padding: 56px 0; text-align: center; }
-.jogo-video h2 {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-  font-size: clamp(2rem, 5vw, 3.5rem); color: var(--jogo-heading); margin-bottom: 32px;
+
+/* =========================================================
+   VIDEO DEMO
+   ========================================================= */
+
+.jogo-video {
+
+  background: var(--jogo-video-bg);
+
+  padding: 56px 0;
+
+  text-align: center;
 }
+
+.jogo-video h2 {
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-weight: 700;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  color: var(--jogo-heading);
+
+  margin-bottom: 32px;
+}
+
 .jogo-video-frame {
-  max-width: 749px; margin: 0 auto; aspect-ratio: 749 / 420; background: #d9d9d9;
-  border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
+
+  max-width: 749px;
+
+  margin: 0 auto;
+
+  aspect-ratio: 749 / 420;
+
+  background: #d9d9d9;
+
+  border-radius: var(--radius-md);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
 }
-.jogo-video-frame svg { width: 56px; height: 56px; opacity: .5; }
+
+.jogo-video-frame svg {
+
+  width: 56px;
+
+  height: 56px;
+
+  opacity: 0.5;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLET E CELULAR
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+  .jogo-hero {
+
+    padding: 56px 0;
+  }
+
+  .jogo-hero-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .jogo-hero-copy {
+
+    max-width: 100%;
+  }
+
+  .jogo-hero-media {
+
+    width: 100%;
+  }
+
+  .jogo-hero-media img {
+
+    width: 100%;
+
+    height: auto;
+  }
+
+  .jogo-buttons {
+
+    width: 100%;
+  }
+
+  .btn-jogo-fill,
+  .btn-jogo-outline {
+
+    padding: 14px 24px;
+
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .jogo-hero {
+
+    padding: 40px 0;
+  }
+
+  .jogo-hero-grid {
+
+    gap: 32px;
+  }
+
+  .jogo-hero-copy {
+
+    gap: 16px;
+  }
+
+  .jogo-hero-copy h1 {
+
+    font-size: 48px;
+  }
+
+  .jogo-hero-copy p {
+
+    font-size: 14px;
+  }
+
+  .jogo-buttons {
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .btn-jogo-fill,
+  .btn-jogo-outline {
+
+    justify-content: center;
+
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .jogo-journey {
+
+    padding: 40px 0;
+  }
+
+  .jogo-gallery {
+
+    flex-direction: column;
+  }
+
+  .jogo-gallery .gallery-wide,
+  .jogo-gallery .gallery-tall {
+
+    width: 100%;
+
+    flex: none;
+  }
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório — IntelliCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="relatorio.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="logo">INTELLICART</a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="pagina1.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html" class="active">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <img src="imagens/toggle-dark.png" alt="" class="toggle-img toggle-img-dark">
+        <img src="imagens/toggle-light.png" alt="" class="toggle-img toggle-img-light">
+      </button>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <span class="mobile-menu-handle"></span>
+    <p class="mobile-menu-title">INTELLICART</p>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="pagina1.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="nos.html">Sobre nós</a></li>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html" class="active">Relatório</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main class="rel-page">
+  <div class="container">
+
+    <div class="rel-head">
+      <div>
+        <p class="rel-eyebrow">Olá, Usuário</p>
+        <h1>Relatório de Compras</h1>
+      </div>
+      <div class="rel-search">
+        <input type="search" placeholder="Localizar produto">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+    </div>
+
+    <h2 class="rel-section-title">Produtos Adicionados Recentemente</h2>
+
+    <div class="rel-table-head">
+      <span>Produto</span>
+      <span>Qnt.</span>
+      <span>Total</span>
+      <span>Deletar</span>
+    </div>
+
+    <div class="rel-row">
+      <span class="rel-product"><span class="rel-thumb" style="background:#ffe4d6">🍎</span>Maçã Fuji</span>
+      <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
+      <span class="rel-total">R$ 6,00</span>
+      <button type="button" class="rel-remove" aria-label="Remover Maçã Fuji">✕</button>
+    </div>
+
+    <div class="rel-row">
+      <span class="rel-product"><span class="rel-thumb" style="background:#ffd6d6">🍓</span>Bandj. Morango</span>
+      <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
+      <span class="rel-total">R$ 9,50</span>
+      <button type="button" class="rel-remove" aria-label="Remover Bandeja de Morango">✕</button>
+    </div>
+
+    <div class="rel-row">
+      <span class="rel-product"><span class="rel-thumb" style="background:#eef0f2">🥛</span>Leite Int. 1L</span>
+      <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
+      <span class="rel-total">R$ 20,56</span>
+      <button type="button" class="rel-remove" aria-label="Remover Leite Integral 1L">✕</button>
+    </div>
+
+    <div class="rel-charts">
+      <div class="rel-chart-card">
+        <svg class="rel-donut" viewBox="0 0 120 120">
+          <circle class="rel-donut-track" cx="60" cy="60" r="50"/>
+          <circle class="rel-donut-value rel-donut-value--orange" cx="60" cy="60" r="50" style="--pct:60"/>
+        </svg>
+        <div class="rel-chart-info">
+          <p class="rel-chart-value">60min</p>
+          <p class="rel-chart-label">Porcentagem<br>de Uso</p>
+        </div>
+      </div>
+
+      <div class="rel-chart-card">
+        <svg class="rel-donut" viewBox="0 0 120 120">
+          <circle class="rel-donut-track" cx="60" cy="60" r="50"/>
+          <circle class="rel-donut-value rel-donut-value--lime" cx="60" cy="60" r="50" style="--pct:75"/>
+        </svg>
+        <div class="rel-chart-info">
+          <p class="rel-chart-value">75%</p>
+          <p class="rel-chart-label">Porcentagem<br>de Bateria</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="imagens/logo-mark.svg" alt="" width="133" height="133" class="footer-logo-mark">
+        <span>INTELLICART</span>
+      </div>
+      <p>Sistema Inteligente de Carrinho Automatizado para Supermercados</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        <li><a href="pagina1.html">Home</a></li>
+        <li><a href="pagina2.html">Como Funciona</a></li>
+        <li><a href="componentes.html">Produto</a></li>
+      </ul>
+      <ul>
+        <li><a href="jogo.html">Jogo</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="nos.html">Sobre nós</a></li>
+      </ul>
+      <ul>
+        <li><a href="monitoramento.html">Monitoramento</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-team">
+      <h4>Integrantes</h4>
+      <ul>
+        <li>Sophia Leal</li>
+        <li>Guilherme Carvalho</li>
+        <li>Roberta Vitória</li>
+        <li>Matheus Lima</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="relatorio.js"></script>
+</body>
+</html>

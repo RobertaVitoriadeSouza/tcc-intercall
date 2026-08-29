@@ -1,0 +1,102 @@
+/* =========================================================
+   relatorio.html — Relatório de Compras
+   Depende das variáveis e do reset definidos em style.css
+   Baseado na tela de referência já vista no Figma (mobile);
+   sem acesso à versão desktop exata no momento da criação.
+   ========================================================= */
+
+[data-theme="dark"] {
+  --rel-heading: #ede2c4;
+  --rel-body: #c2c8bd;
+  --rel-row-bg: #2a2410;
+  --rel-track: rgba(255,255,255,.15);
+}
+
+[data-theme="light"] {
+  --rel-heading: #1f4400;
+  --rel-body: #2f2a16;
+  --rel-row-bg: #9f8f67;
+  --rel-track: rgba(255,255,255,.5);
+}
+
+.rel-page { background: var(--page-bg); padding: 40px 0 64px; }
+
+.rel-head {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+  gap: 16px; margin-bottom: 28px;
+}
+.rel-eyebrow {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;
+  color: var(--orange); margin-bottom: 4px;
+}
+.rel-head h1 {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px;
+  color: var(--rel-heading);
+}
+.rel-search { position: relative; }
+.rel-search input {
+  background: var(--rel-row-bg); border: none; border-radius: var(--radius-pill);
+  padding: 10px 40px 10px 18px; font-size: 14px; color: var(--rel-heading);
+  width: 220px; max-width: 100%;
+}
+.rel-search input::placeholder { color: var(--rel-body); }
+.rel-search svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--rel-body); }
+
+.rel-section-title {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;
+  color: var(--rel-heading); margin-bottom: 16px;
+}
+
+.rel-table-head {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 0.6fr;
+  padding: 12px 20px; background: var(--orange); color: #fff;
+  border-radius: var(--radius-pill); font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px;
+}
+.rel-table-head span:nth-child(2), .rel-table-head span:nth-child(3), .rel-table-head span:nth-child(4) { text-align: center; }
+
+.rel-row {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 0.6fr; align-items: center;
+  background: var(--rel-row-bg); border-radius: var(--radius-pill);
+  padding: 10px 20px; margin-bottom: 12px; gap: 8px;
+}
+.rel-product { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: var(--rel-heading); }
+.rel-thumb { width: 36px; height: 36px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.rel-qty { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px; color: var(--rel-body); }
+.rel-qty button { width: 22px; height: 22px; border-radius: 50%; background: var(--green-dark); color: var(--lime); display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 1; }
+.rel-total { text-align: center; font-size: 14px; font-weight: 700; color: var(--rel-heading); }
+.rel-remove { justify-self: center; width: 26px; height: 26px; border-radius: 50%; background: var(--green-dark); color: var(--lime); font-size: 12px; }
+
+.rel-charts { display: grid; gap: 24px; margin-top: 40px; }
+.rel-chart-card {
+  background: var(--rel-row-bg); border: 1px solid var(--orange); border-radius: var(--radius-lg);
+  padding: 28px; display: flex; align-items: center; justify-content: center; gap: 24px;
+}
+.rel-donut { width: 140px; height: 140px; flex: none; transform: rotate(-90deg); }
+.rel-donut-track { fill: none; stroke: var(--rel-track); stroke-width: 12; }
+.rel-donut-value {
+  fill: none; stroke-width: 12; stroke-linecap: round;
+  stroke-dasharray: calc(var(--pct) / 100 * 314.159) 314.159;
+}
+.rel-donut-value--orange { stroke: var(--orange); }
+.rel-donut-value--lime { stroke: var(--lime); }
+.rel-chart-value { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: var(--rel-heading); }
+.rel-chart-label { font-size: 13px; color: var(--rel-body); margin-top: 4px; line-height: 1.4; }
+
+@media (min-width: 640px) {
+  .rel-charts { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .rel-table-head { display: none; }
+  .rel-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "product remove" "qty total";
+    row-gap: 10px;
+  }
+  .rel-product { grid-area: product; }
+  .rel-remove { grid-area: remove; justify-self: end; }
+  .rel-qty { grid-area: qty; justify-content: flex-start; }
+  .rel-total { grid-area: total; text-align: right; }
+  .rel-chart-card { flex-direction: column; text-align: center; }
+}

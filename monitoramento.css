@@ -1,0 +1,126 @@
+/* =========================================================
+   monitoramento.html — Monitoramento do carrinho
+   Depende das variáveis e do reset definidos em style.css
+   Baseado na tela de referência já vista no Figma (mobile);
+   sem acesso à versão desktop exata no momento da criação.
+   ========================================================= */
+
+[data-theme="dark"] {
+  --monit-heading: #ede2c4;
+  --monit-body: #c2c8bd;
+  --monit-row-bg: #2a2410;
+  --monit-total-bg: #163a19;
+}
+
+[data-theme="light"] {
+  --monit-heading: #1f4400;
+  --monit-body: #2f2a16;
+  --monit-row-bg: #f4ecd8;
+  --monit-total-bg: #9f8f67;
+}
+
+.monit-page { background: var(--page-bg); padding: 40px 0 64px; }
+
+.monit-head {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+  gap: 16px; margin-bottom: 32px;
+}
+.monit-eyebrow {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;
+  color: var(--orange); margin-bottom: 4px;
+}
+.monit-head h1 {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px;
+  color: var(--monit-heading);
+}
+.monit-battery {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--monit-body);
+}
+.monit-battery-pill {
+  background: var(--green-dark); color: var(--lime);
+  border-radius: var(--radius-pill); padding: 6px 14px; font-weight: 700; font-size: 13px;
+}
+
+.monit-grid { display: grid; gap: 24px; }
+
+.monit-table-head {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 0.6fr;
+  padding: 12px 20px; background: var(--orange); color: #fff;
+  border-radius: var(--radius-pill); font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px;
+}
+.monit-table-head span:nth-child(2),
+.monit-table-head span:nth-child(3),
+.monit-table-head span:nth-child(4) { text-align: center; }
+
+.monit-row {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 0.6fr; align-items: center;
+  background: var(--monit-row-bg); border-radius: var(--radius-pill);
+  padding: 10px 20px; margin-bottom: 12px; gap: 8px;
+}
+.monit-product { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: var(--monit-heading); }
+.monit-thumb {
+  width: 36px; height: 36px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.monit-qty { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px; color: var(--monit-body); }
+.monit-qty button {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--green-dark); color: var(--lime);
+  display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 1;
+}
+.monit-total { text-align: center; font-size: 14px; font-weight: 700; color: var(--monit-heading); }
+.monit-remove {
+  justify-self: center; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--green-dark); color: var(--lime); font-size: 12px;
+}
+
+.monit-suggest-title {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;
+  color: var(--monit-heading); margin: 32px 0 16px;
+}
+.monit-suggest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.monit-suggest-card { background: var(--monit-row-bg); border-radius: var(--radius-md); padding: 16px; }
+.monit-thumb--lg { width: 100%; height: 90px; border-radius: var(--radius-sm); font-size: 32px; }
+.monit-suggest-card p { font-size: 14px; font-weight: 600; color: var(--monit-heading); margin: 10px 0 6px; }
+.monit-suggest-foot { display: flex; align-items: center; justify-content: space-between; }
+.monit-suggest-foot span { font-size: 14px; font-weight: 700; color: var(--monit-body); }
+.monit-suggest-foot button {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--green-dark); font-size: 13px;
+}
+
+.monit-total-card {
+  background: var(--monit-total-bg); border-radius: var(--radius-lg); padding: 28px;
+  height: fit-content;
+}
+.monit-total-card h2 {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px;
+  color: var(--monit-heading); margin-bottom: 20px;
+}
+.monit-total-line { display: flex; justify-content: space-between; font-size: 14px; color: var(--monit-body); margin-bottom: 12px; }
+.monit-total-divider { height: 1px; background: rgba(255,255,255,.2); margin: 16px 0; }
+.monit-total-line--big { font-size: 18px; font-weight: 700; color: var(--monit-heading); margin-bottom: 20px; }
+.monit-total-note { font-size: 13px; color: var(--monit-body); text-align: center; margin-bottom: 20px; }
+.monit-btn-finalizar {
+  width: 100%; background: var(--orange); color: #fff;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;
+  padding: 14px; border-radius: var(--radius-pill);
+}
+
+@media (min-width: 900px) {
+  .monit-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  .monit-suggest-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .monit-table-head { display: none; }
+  .monit-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "product remove" "qty total";
+    row-gap: 10px;
+  }
+  .monit-product { grid-area: product; }
+  .monit-remove { grid-area: remove; justify-self: end; }
+  .monit-qty { grid-area: qty; justify-content: flex-start; }
+  .monit-total { grid-area: total; text-align: right; }
+}
