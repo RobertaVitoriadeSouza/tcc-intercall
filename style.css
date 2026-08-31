@@ -212,11 +212,12 @@ footer {
     color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 2.5rem 2rem;
-    gap: 2.5rem;
+    gap: 3rem;
 }
+.footer-team { margin-left: auto; }
 
 .footer-logo img {
     width: 8.3rem;
@@ -263,10 +264,6 @@ footer {
     color: #FF6B35;
 }
 
-.footer-team {
-    margin-left: 0;
-}
-
 .footer-team h2 {
     font-size: 1.6rem;
     font-weight: 800;
@@ -284,4 +281,5 @@ footer {
     footer { flex-direction: column; align-items: flex-start; }
     .footer-links { grid-template-columns: repeat(2, auto); column-gap: 2.5rem; }
     .footer-logo img { width: 5.5rem; }
+    .footer-team { margin-left: 0; }
 }
