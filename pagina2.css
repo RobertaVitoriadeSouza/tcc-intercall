@@ -97,10 +97,7 @@
 
 @media (min-width: 860px) {
   .roadmap { margin: 0; padding: 48px; }
-  .roadmap-grid { grid-template-columns: repeat(4, 1fr); position: relative; }
-  .roadmap-grid::before {
-    content: ''; position: absolute; z-index: 0; top: 40px; left: 40px; width: calc(75% + 24px); height: 1px; background: var(--green-pale);
-  }
+  .roadmap-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* Video section */
