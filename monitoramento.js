@@ -67,13 +67,17 @@ document.addEventListener('DOMContentLoaded', function () {
         var span = existingRow.querySelector('.monit-qty span');
         span.textContent = parseInt(span.textContent, 10) + 1;
       } else {
+        var thumbHtml = thumb.tagName === 'IMG'
+          ? '<img class="monit-thumb" src="' + thumb.getAttribute('src') + '" alt="">'
+          : '<span class="monit-thumb" style="background:' + getComputedStyle(thumb).backgroundColor + '">' + thumb.textContent + '</span>';
+
         var row = document.createElement('div');
         row.className = 'monit-row';
         row.dataset.unitPrice = price;
         row.dataset.name = name;
         row.innerHTML =
           '<span class="monit-product">' +
-            '<span class="monit-thumb" style="background:' + getComputedStyle(thumb).backgroundColor + '">' + thumb.textContent + '</span>' +
+            thumbHtml +
             name +
           '</span>' +
           '<span class="monit-qty">' +

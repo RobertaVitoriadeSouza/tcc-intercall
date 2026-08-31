@@ -65,6 +65,7 @@
   width: 36px; height: 36px; border-radius: 50%; flex: none;
   display: flex; align-items: center; justify-content: center; font-size: 18px;
 }
+img.monit-thumb { object-fit: cover; background: #fff; }
 .monit-qty { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px; color: var(--monit-body); }
 .monit-qty button {
   width: 22px; height: 22px; border-radius: 50%; background: var(--green-dark); color: var(--lime);
@@ -104,6 +105,7 @@
 }
 .monit-suggest-card.monit-just-added { transform: scale(0.94); }
 .monit-thumb--lg { width: 100%; height: 90px; border-radius: var(--radius-sm); font-size: 32px; }
+.monit-thumb--lg.monit-thumb-img { display: block; background: #fff; object-fit: contain; padding: 6px; }
 .monit-suggest-card p { font-size: 14px; font-weight: 600; color: var(--monit-heading); margin: 10px 0 6px; }
 .monit-suggest-foot { display: flex; align-items: center; justify-content: space-between; }
 .monit-suggest-foot span { font-size: 14px; font-weight: 700; color: var(--monit-body); }
