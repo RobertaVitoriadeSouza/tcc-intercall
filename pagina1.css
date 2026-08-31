@@ -270,15 +270,17 @@
 
   border-radius: var(--radius-lg);
 
-  overflow: hidden;
+  padding: 32px;
 
   display: grid;
 
   gap: 32px;
 
+  align-items: start;
+
 }
 
-.finalidade-copy { display: flex; flex-direction: column; gap: 20px; padding: 32px; }
+.finalidade-copy { display: flex; flex-direction: column; gap: 20px; }
 
 .finalidade-copy h2 { font-size: 32px; font-weight: 600; color: var(--finalidade-heading); }
 
@@ -288,13 +290,15 @@
 
   background: var(--finalidade-highlight-bg);
 
-  border-left: 4px solid var(--lime);
+  border: 1px solid var(--lime);
+
+  border-radius: var(--radius-md);
 
   padding: 24px;
 
   display: flex; flex-direction: column; gap: 8px;
 
-  justify-content: center;
+  align-self: start;
 
 }
 
@@ -306,9 +310,7 @@
 
   .finalidade { padding: 80px 0; }
 
-  .finalidade-panel { grid-template-columns: 1.6fr 1fr; gap: 0; }
-
-  .finalidade-copy { padding: 48px; }
+  .finalidade-panel { grid-template-columns: 1.6fr 1fr; padding: 48px; align-items: start; }
 
 }
 
