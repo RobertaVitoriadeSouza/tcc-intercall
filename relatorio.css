@@ -21,10 +21,10 @@
 
 .rel-page { background: var(--page-bg); padding: 40px 0 64px; }
 
-.rel-head {
-  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
-  gap: 16px; margin-bottom: 28px;
-}
+.rel-layout { display: grid; gap: 24px; }
+.rel-sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+.rel-head { margin-bottom: 28px; }
 .rel-eyebrow {
   font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;
   color: var(--orange); margin-bottom: 4px;
@@ -37,7 +37,7 @@
 .rel-search input {
   background: var(--rel-row-bg); border: none; border-radius: var(--radius-pill);
   padding: 10px 40px 10px 18px; font-size: 14px; color: var(--rel-heading);
-  width: 220px; max-width: 100%;
+  width: 100%;
 }
 .rel-search input::placeholder { color: var(--rel-body); }
 .rel-search svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--rel-body); }
@@ -67,7 +67,7 @@
 .rel-total { text-align: center; font-size: 14px; font-weight: 700; color: var(--rel-heading); }
 .rel-remove { justify-self: center; width: 26px; height: 26px; border-radius: 50%; background: var(--green-dark); color: var(--lime); font-size: 12px; }
 
-.rel-charts { display: grid; gap: 24px; margin-top: 40px; }
+.rel-charts { display: grid; gap: 24px; }
 .rel-chart-card {
   background: var(--rel-row-bg); border: 1px solid var(--orange); border-radius: var(--radius-lg);
   padding: 28px; display: flex; align-items: center; justify-content: center; gap: 24px;
@@ -83,8 +83,8 @@
 .rel-chart-value { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: var(--rel-heading); }
 .rel-chart-label { font-size: 13px; color: var(--rel-body); margin-top: 4px; line-height: 1.4; }
 
-@media (min-width: 640px) {
-  .rel-charts { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) {
+  .rel-layout { grid-template-columns: 1fr 320px; align-items: start; }
 }
 
 @media (max-width: 640px) {

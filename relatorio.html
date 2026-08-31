@@ -64,69 +64,74 @@
 <main class="rel-page">
   <div class="container">
 
-    <div class="rel-head">
-      <div>
-        <p class="rel-eyebrow">Olá, Usuário</p>
-        <h1>Relatório de Compras</h1>
-      </div>
-      <div class="rel-search">
-        <input type="search" placeholder="Localizar produto">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </div>
-    </div>
+    <div class="rel-layout">
+      <div class="rel-main">
+        <div class="rel-head">
+          <p class="rel-eyebrow">Olá, Usuário</p>
+          <h1>Relatório de Compras</h1>
+        </div>
 
-    <h2 class="rel-section-title">Produtos Adicionados Recentemente</h2>
+        <h2 class="rel-section-title">Produtos Adicionados Recentemente</h2>
 
-    <div class="rel-table-head">
-      <span>Produto</span>
-      <span>Qnt.</span>
-      <span>Total</span>
-      <span>Deletar</span>
-    </div>
+        <div class="rel-table-head">
+          <span>Produto</span>
+          <span>Qnt.</span>
+          <span>Total</span>
+          <span>Deletar</span>
+        </div>
 
-    <div class="rel-row">
-      <span class="rel-product"><span class="rel-thumb" style="background:#ffe4d6">🍎</span>Maçã Fuji</span>
-      <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
-      <span class="rel-total">R$ 6,00</span>
-      <button type="button" class="rel-remove" aria-label="Remover Maçã Fuji">✕</button>
-    </div>
+        <div class="rel-row">
+          <span class="rel-product"><span class="rel-thumb" style="background:#ffe4d6">🍎</span>Maçã Fuji</span>
+          <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
+          <span class="rel-total">R$ 6,00</span>
+          <button type="button" class="rel-remove" aria-label="Remover Maçã Fuji">✕</button>
+        </div>
 
-    <div class="rel-row">
-      <span class="rel-product"><span class="rel-thumb" style="background:#ffd6d6">🍓</span>Bandj. Morango</span>
-      <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
-      <span class="rel-total">R$ 9,50</span>
-      <button type="button" class="rel-remove" aria-label="Remover Bandeja de Morango">✕</button>
-    </div>
+        <div class="rel-row">
+          <span class="rel-product"><span class="rel-thumb" style="background:#ffd6d6">🍓</span>Bandj. Morango</span>
+          <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
+          <span class="rel-total">R$ 9,50</span>
+          <button type="button" class="rel-remove" aria-label="Remover Bandeja de Morango">✕</button>
+        </div>
 
-    <div class="rel-row">
-      <span class="rel-product"><span class="rel-thumb" style="background:#eef0f2">🥛</span>Leite Int. 1L</span>
-      <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
-      <span class="rel-total">R$ 20,56</span>
-      <button type="button" class="rel-remove" aria-label="Remover Leite Integral 1L">✕</button>
-    </div>
-
-    <div class="rel-charts">
-      <div class="rel-chart-card">
-        <svg class="rel-donut" viewBox="0 0 120 120">
-          <circle class="rel-donut-track" cx="60" cy="60" r="50"/>
-          <circle class="rel-donut-value rel-donut-value--orange" cx="60" cy="60" r="50" style="--pct:60"/>
-        </svg>
-        <div class="rel-chart-info">
-          <p class="rel-chart-value">60min</p>
-          <p class="rel-chart-label">Porcentagem<br>de Uso</p>
+        <div class="rel-row">
+          <span class="rel-product"><span class="rel-thumb" style="background:#eef0f2">🥛</span>Leite Int. 1L</span>
+          <span class="rel-qty"><button type="button" aria-label="Diminuir">−</button><span>1</span><button type="button" aria-label="Aumentar">+</button></span>
+          <span class="rel-total">R$ 20,56</span>
+          <button type="button" class="rel-remove" aria-label="Remover Leite Integral 1L">✕</button>
         </div>
       </div>
 
-      <div class="rel-chart-card">
-        <svg class="rel-donut" viewBox="0 0 120 120">
-          <circle class="rel-donut-track" cx="60" cy="60" r="50"/>
-          <circle class="rel-donut-value rel-donut-value--lime" cx="60" cy="60" r="50" style="--pct:75"/>
-        </svg>
-        <div class="rel-chart-info">
-          <p class="rel-chart-value">75%</p>
-          <p class="rel-chart-label">Porcentagem<br>de Bateria</p>
+      <aside class="rel-sidebar">
+        <div class="rel-search">
+          <input type="search" placeholder="Localizar produto">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
-      </div>
+
+        <div class="rel-charts">
+          <div class="rel-chart-card">
+            <svg class="rel-donut" viewBox="0 0 120 120">
+              <circle class="rel-donut-track" cx="60" cy="60" r="50"/>
+              <circle class="rel-donut-value rel-donut-value--orange" cx="60" cy="60" r="50" style="--pct:60"/>
+            </svg>
+            <div class="rel-chart-info">
+              <p class="rel-chart-value">60min</p>
+              <p class="rel-chart-label">Porcentagem<br>de Uso</p>
+            </div>
+          </div>
+
+          <div class="rel-chart-card">
+            <svg class="rel-donut" viewBox="0 0 120 120">
+              <circle class="rel-donut-track" cx="60" cy="60" r="50"/>
+              <circle class="rel-donut-value rel-donut-value--lime" cx="60" cy="60" r="50" style="--pct:75"/>
+            </svg>
+            <div class="rel-chart-info">
+              <p class="rel-chart-value">75%</p>
+              <p class="rel-chart-label">Porcentagem<br>de Bateria</p>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
 
   </div>
