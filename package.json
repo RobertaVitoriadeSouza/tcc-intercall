@@ -1,0 +1,13 @@
+{
+  "name": "intellicart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site IntelliCart com backend de login e cadastro",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
+}
