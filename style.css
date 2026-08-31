@@ -64,6 +64,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   --publico-bg: #181303;
   --finalidade-bg: #120e01;
   --finalidade-panel-bg: #163a19;
+  --finalidade-highlight-bg: #163a19;
 
   --text-body: #181303;
   --eyebrow-text: #c3cf5a;
@@ -84,6 +85,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   --publico-bg: #ede2c4;
   --finalidade-bg: #ede2c4;
   --finalidade-panel-bg: #9f8f67;
+  --finalidade-highlight-bg: #5f6910;
 
   --text-body: #181303;
   --eyebrow-text: #5f6910;
