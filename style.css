@@ -214,7 +214,7 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem 2.5rem 2.75rem;
     gap: 3rem;
 }
 .footer-team { margin-left: auto; }
