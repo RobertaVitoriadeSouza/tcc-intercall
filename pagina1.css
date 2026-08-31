@@ -288,7 +288,7 @@
 
 .finalidade-highlight {
 
-  background: var(--finalidade-highlight-bg);
+  background: color-mix(in srgb, var(--finalidade-highlight-bg) 88%, transparent);
 
   border: 1px solid var(--lime);
 
@@ -306,11 +306,13 @@
 
 .finalidade-highlight p { font-size: 14px; line-height: 20px; color: var(--highlight-body); }
 
+.finalidade-container { max-width: 1376px; }
+
 @media (min-width: 900px) {
 
   .finalidade { padding: 80px 0; }
 
-  .finalidade-panel { grid-template-columns: 1.6fr 1fr; padding: 48px; align-items: start; }
+  .finalidade-panel { grid-template-columns: 2.2fr 1fr; gap: 64px; padding: 48px; align-items: start; }
 
 }
 
