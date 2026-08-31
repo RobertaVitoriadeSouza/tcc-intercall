@@ -216,6 +216,13 @@
   gap: 48px;
 }
 
+.jogo-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
 .jogo-icon-box {
 
   display: inline-flex;
@@ -223,8 +230,9 @@
   align-items: center;
   justify-content: center;
 
-  width: 64px;
-  height: 64px;
+  width: 44px;
+  height: 44px;
+  flex: none;
 
   border-radius: var(--radius-md);
 
@@ -233,8 +241,6 @@
   border: 1px solid var(--lime);
 
   color: var(--lime);
-
-  margin-bottom: 16px;
 }
 
 .jogo-resumo h2,
@@ -248,7 +254,7 @@
 
   color: #ec8a3f;
 
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .jogo-resumo p {
