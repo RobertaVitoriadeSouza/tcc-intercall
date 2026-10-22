@@ -598,3 +598,50 @@
     height: 42px;
   }
 }
+
+/* RESUMO E FASES LADO A LADO */
+
+.jogo-journey .jogo-journey-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+
+.jogo-journey .jogo-resumo,
+.jogo-journey .jogo-fases {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.jogo-journey .jogo-resumo p {
+  margin-top: 0;
+}
+
+.jogo-journey .jogo-fases {
+  padding-top: 0;
+  padding-left: 28px;
+  border-top: none;
+  border-left: 2px solid var(--lime);
+}
+
+.jogo-journey .jogo-fase:last-child {
+  margin-bottom: 0;
+}
+
+/* TABLET E CELULAR: UM ABAIXO DO OUTRO */
+
+@media (max-width: 899px) {
+  .jogo-journey .jogo-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .jogo-journey .jogo-fases {
+    padding-top: 24px;
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid var(--lime);
+  }
+}
