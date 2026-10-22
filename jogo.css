@@ -496,3 +496,96 @@
     height: 54px;
   }
 }
+
+/* VIDEO DEMO — INTELLICART */
+
+.jogo-video {
+  background: var(--jogo-video-bg);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.jogo-video h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--jogo-heading);
+  margin: 0 0 24px;
+}
+
+.jogo-video .jogo-video-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  padding: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagens/jogo novo 2.jpeg");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #101b08;
+
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.jogo-video .jogo-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #d4df65;
+  color: #18340c;
+
+  transition: transform 0.2s ease;
+}
+
+.jogo-video .jogo-play svg {
+  width: 22px;
+  height: 22px;
+  margin-left: 3px;
+}
+
+.jogo-video .jogo-video-label {
+  margin-top: 10px;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 1px 4px #000;
+}
+
+.jogo-video .jogo-video-frame:hover .jogo-play {
+  transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+  .jogo-video {
+    padding: 32px 16px;
+  }
+
+  .jogo-video .jogo-video-frame {
+    max-width: 100%;
+  }
+
+  .jogo-video .jogo-play {
+    width: 42px;
+    height: 42px;
+  }
+}
