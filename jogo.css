@@ -282,21 +282,30 @@
 
 /* RESUMO E FASES DESKTOP */
 
+
+/* RESUMO E FASES LADO A LADO */
+
 @media (min-width: 900px) {
   .jogo-journey-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    align-items: start;
+    gap: 40px;
+  }
+
+  .jogo-resumo {
+    min-width: 0;
   }
 
   .jogo-fases {
+    min-width: 0;
     padding-top: 0;
-    padding-left: 48px;
+    padding-left: 32px;
     border-top: none;
     border-left: 2px solid var(--lime);
   }
 }
 
-/* VIDEO DEMO */
 
 .jogo-video {
   background: var(--jogo-video-bg);
