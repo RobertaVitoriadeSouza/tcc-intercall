@@ -268,74 +268,6 @@
   color: var(--jogo-body);
 }
 
-.jogo-gallery {
-
-  display: flex;
-
-  gap: 16px;
-
-  margin-top: 24px;
-
-  flex-wrap: wrap;
-
-  align-items: flex-start;
-}
-
-.jogo-gallery img {
-
-  border-radius: var(--radius-md);
-
-  object-fit: cover;
-}
-
-.jogo-gallery .gallery-wide {
-
-  flex: 1 1 220px;
-
-  min-width: 0;
-
-  aspect-ratio: 5 / 4;
-}
-
-.jogo-gallery .gallery-tall {
-
-  flex: 0 1 160px;
-
-  min-width: 0;
-
-  aspect-ratio: 213 / 312;
-
-  object-position: right;
-}
-
-/* Composição exata do Figma (Section - User Journey Visualization):
-   as 3 fotos formam um colagem assimétrica, não uma fileira única —
-   a foto alta fica à direita, deslocada para cima em relação às outras duas. */
-@media (min-width: 900px) {
-  .jogo-gallery {
-    display: block;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 995 / 423;
-  }
-
-  .jogo-gallery img {
-    position: absolute;
-  }
-
-  .jogo-gallery img:nth-child(1) {
-    left: 0%; top: 43.26%; width: 30.15%; height: 56.74%;
-  }
-
-  .jogo-gallery img:nth-child(2) {
-    left: 36.38%; top: 43.26%; width: 27.74%; height: 56.74%;
-  }
-
-  .jogo-gallery .gallery-tall {
-    left: 78.59%; top: 0%; width: 21.41%; height: 73.76%;
-  }
-}
-
 
 /* =========================================================
    FASES
@@ -433,22 +365,18 @@
 
 .jogo-video-frame {
 
-  max-width: 749px;
 
-  margin: 0 auto;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("imagens/jogo novo 2.jpeg");
 
-  aspect-ratio: 749 / 420;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  background: #d9d9d9;
-
-  border-radius: var(--radius-md);
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
 }
 
 .jogo-video-frame svg {
