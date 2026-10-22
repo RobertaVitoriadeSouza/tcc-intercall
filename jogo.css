@@ -1,49 +1,25 @@
+
 [data-theme="dark"] {
-
-  --jogo-hero-bg: radial-gradient(
-    circle at 30% 20%,
-    #1f4a24,
-    #120e01 70%
-  );
-
+  --jogo-hero-bg: radial-gradient(circle at 30% 20%, #1f4a24, #120e01 70%);
   --jogo-heading: #ececec;
   --jogo-body: #ececec;
   --jogo-journey-bg: #17230c;
   --jogo-btn1-text: #ececec;
   --jogo-btn2-text: #c3cf5a;
-
-  --jogo-video-bg: radial-gradient(
-    circle at 50% 30%,
-    #1f4a24,
-    #120e01 75%
-  );
+  --jogo-video-bg: radial-gradient(circle at 50% 30%, #1f4a24, #120e01 75%);
 }
 
 [data-theme="light"] {
-
-  --jogo-hero-bg: radial-gradient(
-    circle at 30% 20%,
-    #b3a67d,
-    #9f8f67 70%
-  );
-
+  --jogo-hero-bg: radial-gradient(circle at 30% 20%, #b3a67d, #9f8f67 70%);
   --jogo-heading: #163a19;
   --jogo-body: #1f4400;
   --jogo-journey-bg: #ede2c4;
   --jogo-btn1-text: #1f4400;
   --jogo-btn2-text: #1f4400;
-
-  --jogo-video-bg: radial-gradient(
-    circle at 50% 30%,
-    #cdbf95,
-    #9f8f67 75%
-  );
+  --jogo-video-bg: radial-gradient(circle at 50% 30%, #cdbf95, #9f8f67 75%);
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
+/* HERO */
 
 .jogo-hero {
   background: var(--jogo-hero-bg);
@@ -69,13 +45,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   background: var(--lime);
   color: #1f4400;
-
   border-radius: var(--radius-pill);
   padding: 6px 16px;
-
   font-size: 14px;
   font-weight: 500;
 }
@@ -84,7 +57,6 @@
   content: '';
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
   background: #1f4400;
 }
@@ -92,48 +64,35 @@
 .jogo-hero-copy h1 {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-
   font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
-
   line-height: 1.1;
   letter-spacing: -1.4px;
-
   color: var(--jogo-heading);
-
   margin: 0;
 }
 
 .jogo-hero-copy p {
   font-size: 16px;
   line-height: 1.5;
-
   color: var(--jogo-body);
-
   max-width: 34em;
-
   margin: 0;
 }
 
 .jogo-buttons {
   display: flex;
   flex-wrap: wrap;
-
   gap: 16px;
-
   margin-top: 4px;
 }
 
 .btn-jogo-fill,
 .btn-jogo-outline {
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   padding: 16px 32px;
-
   border-radius: var(--radius-md);
-
   font-size: 18px;
 }
 
@@ -144,20 +103,16 @@
 
 .btn-jogo-outline {
   background: none;
-
   border: 2px solid var(--lime);
-
   color: var(--jogo-btn2-text);
 }
-
-
 
 .jogo-hero-media {
   width: 100%;
   height: 320px;
   overflow: hidden;
   border-radius: var(--radius-md);
-  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 .jogo-hero-media img {
@@ -169,22 +124,16 @@
   border-radius: var(--radius-md);
 }
 
-/* =========================================================
-   DESKTOP
-   ========================================================= */
+/* HERO DESKTOP */
 
 @media (min-width: 900px) {
-
   .jogo-hero {
     padding: 90px 0 80px;
   }
 
   .jogo-hero-grid {
-
     grid-template-columns: 0.72fr 1.28fr;
-
     gap: 55px;
-
     align-items: center;
   }
 
@@ -195,24 +144,17 @@
   .jogo-hero-media {
     width: 100%;
   }
-
 }
 
-
-/* =========================================================
-   JOURNEY / GAMEPLAY
-   ========================================================= */
+/* RESUMO E GAMEPLAY */
 
 .jogo-journey {
   background: var(--jogo-journey-bg);
-
   padding: 56px 0;
 }
 
 .jogo-journey-grid {
-
   display: grid;
-
   gap: 48px;
 }
 
@@ -224,286 +166,333 @@
 }
 
 .jogo-icon-box {
-
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   width: 44px;
   height: 44px;
   flex: none;
-
   border-radius: var(--radius-md);
-
   background: var(--green-dark);
-
   border: 1px solid var(--lime);
-
   color: var(--lime);
 }
 
 .jogo-resumo h2,
 .jogo-fases h2 {
-
   font-family: 'Gajraj One', cursive;
-
   font-weight: 400;
-
   font-size: 24px;
-
   color: #ec8a3f;
-
   margin-bottom: 0;
 }
 
 .jogo-resumo p {
-
   font-size: 15px;
-
   line-height: 1.6;
-
   font-weight: 600;
-
   color: var(--jogo-body);
 }
 
+.jogo-gallery {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
 
-/* =========================================================
-   FASES
-   ========================================================= */
+.jogo-gallery img {
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.jogo-gallery .gallery-wide {
+  flex: 1 1 220px;
+  min-width: 0;
+  aspect-ratio: 5 / 4;
+}
+
+.jogo-gallery .gallery-tall {
+  flex: 0 1 160px;
+  min-width: 0;
+  aspect-ratio: 213 / 312;
+  object-position: right;
+}
+
+@media (min-width: 900px) {
+  .jogo-gallery {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 995 / 423;
+  }
+
+  .jogo-gallery img {
+    position: absolute;
+  }
+
+  .jogo-gallery img:nth-child(1) {
+    left: 0%;
+    top: 43.26%;
+    width: 30.15%;
+    height: 56.74%;
+  }
+
+  .jogo-gallery img:nth-child(2) {
+    left: 36.38%;
+    top: 43.26%;
+    width: 27.74%;
+    height: 56.74%;
+  }
+
+  .jogo-gallery .gallery-tall {
+    left: 78.59%;
+    top: 0%;
+    width: 21.41%;
+    height: 73.76%;
+  }
+}
+
+/* FASES */
 
 .jogo-fases {
-
   padding-top: 8px;
-
   border-top: 2px solid var(--lime);
 }
 
 .jogo-fase {
-
   margin-bottom: 28px;
 }
 
 .jogo-fase h3 {
-
   font-family: 'Gajraj One', cursive;
-
   font-weight: 400;
-
   font-size: 17px;
-
   color: #ec8a3f;
-
   margin-bottom: 8px;
 }
 
 .jogo-fase p {
-
   font-size: 14px;
-
   line-height: 1.6;
-
   font-weight: 600;
-
   color: var(--jogo-body);
 }
 
-
-/* =========================================================
-   JOURNEY DESKTOP
-   ========================================================= */
+/* RESUMO E FASES DESKTOP */
 
 @media (min-width: 900px) {
-
   .jogo-journey-grid {
-
     grid-template-columns: 1fr 1fr;
-
     gap: 64px;
   }
 
   .jogo-fases {
-
     padding-top: 0;
-
     padding-left: 48px;
-
     border-top: none;
-
     border-left: 2px solid var(--lime);
   }
-
 }
 
-
-/* =========================================================
-   VIDEO DEMO
-   ========================================================= */
+/* VIDEO DEMO */
 
 .jogo-video {
-
   background: var(--jogo-video-bg);
-
-  padding: 56px 0;
-
+  padding: 40px 0;
   text-align: center;
 }
 
 .jogo-video h2 {
-
   font-family: 'Space Grotesk', sans-serif;
-
   font-weight: 700;
-
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
+  font-size: clamp(2rem, 5vw, 3rem);
   color: var(--jogo-heading);
-
-  margin-bottom: 32px;
+  margin: 0 0 24px;
 }
 
+/* RETÂNGULO COM A IMAGEM DO JOGO */
+
 .jogo-video-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
 
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 
+  background-color: #1f2b18;
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.45)
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.35)
     ),
-    url("imagens/jogo novo 2.jpeg");
+    url("./imagens/jogo%20novo%202.jpeg");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.jogo-video-frame svg {
+/* BOTÃO PLAY */
 
-  width: 56px;
+.jogo-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  height: 56px;
+  width: 60px;
+  height: 60px;
+  flex: none;
 
-  opacity: 0.5;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid white;
+  border-radius: 50%;
+
+  transition: transform 0.3s ease;
 }
 
+.jogo-play svg {
+  width: 30px;
+  height: 30px;
+}
 
-/* =========================================================
-   RESPONSIVIDADE - TABLET E CELULAR
-   ========================================================= */
+/* TEXTO DO BOTÃO */
+
+.jogo-video-label {
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.jogo-video-frame:hover {
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}
+
+.jogo-video-frame:hover .jogo-play {
+  transform: scale(1.1);
+}
+
+.jogo-video-frame:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 5px;
+}
+
+/* TABLET E CELULAR */
 
 @media (max-width: 899px) {
-
   .jogo-hero {
-
     padding: 56px 0;
   }
 
   .jogo-hero-grid {
-
     grid-template-columns: 1fr;
-
     gap: 40px;
   }
 
   .jogo-hero-copy {
-
     max-width: 100%;
   }
 
   .jogo-hero-media {
-
     width: 100%;
   }
 
   .jogo-hero-media img {
-
     width: 100%;
-
     height: auto;
   }
 
   .jogo-buttons {
-
     width: 100%;
   }
 
   .btn-jogo-fill,
   .btn-jogo-outline {
-
     padding: 14px 24px;
-
     font-size: 16px;
   }
-
 }
 
-
-/* =========================================================
-   CELULAR
-   ========================================================= */
+/* CELULAR */
 
 @media (max-width: 600px) {
-
   .jogo-hero {
-
     padding: 40px 0;
   }
 
   .jogo-hero-grid {
-
     gap: 32px;
   }
 
   .jogo-hero-copy {
-
     gap: 16px;
   }
 
   .jogo-hero-copy h1 {
-
     font-size: 48px;
   }
 
   .jogo-hero-copy p {
-
     font-size: 14px;
   }
 
   .jogo-buttons {
-
     flex-direction: column;
-
     align-items: stretch;
   }
 
   .btn-jogo-fill,
   .btn-jogo-outline {
-
     justify-content: center;
-
     width: 100%;
-
     box-sizing: border-box;
   }
 
   .jogo-journey {
-
     padding: 40px 0;
   }
 
   .jogo-gallery {
-
     flex-direction: column;
   }
 
   .jogo-gallery .gallery-wide,
   .jogo-gallery .gallery-tall {
-
     width: 100%;
-
     flex: none;
   }
 
+  .jogo-video {
+    padding: 32px 0;
+  }
+
+  .jogo-video-frame {
+    max-width: 100%;
+  }
+
+  .jogo-play {
+    width: 54px;
+    height: 54px;
+  }
 }
